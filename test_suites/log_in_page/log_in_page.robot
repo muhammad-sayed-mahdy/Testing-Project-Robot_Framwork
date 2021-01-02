@@ -82,3 +82,19 @@ Excessive Consecutive Log ins and outs
         Page Should Not Contain     error
         log_out.Log out user
     END
+
+Excessive Consecutive Log ins and outs Multiple Users
+    # Info
+    [Documentation]  Logging in and out multiple times
+    [Tags]  Component Excess
+    # Procedure
+    FOR    ${i}    IN RANGE    999999
+        Log     trial: ${i}
+        Exit For Loop If    ${i} == 9
+        log_in.Log in user  ${email_1}  ${pass_1}
+        Page Should Not Contain     error
+        log_out.Log out user
+        log_in.Log in user  ${email_2}  ${pass_2}
+        Page Should Not Contain     error
+        log_out.Log out user
+    END
