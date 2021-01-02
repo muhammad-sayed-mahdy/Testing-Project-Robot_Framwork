@@ -17,6 +17,8 @@ Call Test_1 Info
     Set Global Variable     ${email_1}
     Set Global Variable     ${pass_1}
     Set Global Variable     ${user_1}
+
+Call Test_2 Info
     Set Global Variable     ${email_2}
     Set Global Variable     ${pass_2}
     Set Global Variable     ${user_2}
