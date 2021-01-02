@@ -15,3 +15,4 @@ ${website}      http://automationpractice.com/index.php
 ${browser}      chrome
 ${login_page}   http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${logout_page}  http://automationpractice.com/index.php?mylogout=
+${sign_up_prefix}  @ev.com

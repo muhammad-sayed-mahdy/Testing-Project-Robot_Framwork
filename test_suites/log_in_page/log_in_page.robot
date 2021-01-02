@@ -12,7 +12,7 @@ Suite Teardown   Close Browser
 Normal Login
     # Info
     [Documentation]  Logging in
-    [Tags]  Component
+    [Tags]  Integrate
     # Procedure
     log_in.Log in user  ${email_1}  ${pass_1}
     Page Should Not Contain     error
