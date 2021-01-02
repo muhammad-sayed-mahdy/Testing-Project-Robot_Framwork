@@ -3,8 +3,9 @@ Library  SeleniumLibrary
 
 Resource    ../../resources/log_in/log_in.robot
 Resource    ../../resources/log_out/log_out.robot
+Resource    ../../resources/common/common.robot
 
-Test Setup      Open Browser  https://twitter.com  chrome
+Test Setup      common.Open Twitter
 Test Teardown   Close Browser
 
 *** Test Cases ***
