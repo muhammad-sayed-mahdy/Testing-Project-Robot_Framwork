@@ -9,7 +9,6 @@ Suite Setup      common.Open Site
 Suite Teardown   Close Browser
 
 *** Test Cases ***
-
 Normal Login
     # Info
     [Documentation]  Logging in
@@ -44,6 +43,14 @@ Faulty Login with both
     log_in.Log in user  garbage@garbage.com  garbage_pwd
     Page Should Contain     error
 
+Log in empty
+    # Info
+    [Documentation]  Logging in with empty parameters
+    [Tags]  Component Faulty
+    # Procedure
+    log_in.Log in user  ''  ''
+    Page Should Contain     error
+    
 Faulty Multiple Log ins
     # Info
     [Documentation]  Logging in and try to log in again.
