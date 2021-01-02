@@ -52,5 +52,13 @@ Faulty Login with both
     log_in.Log in user  garbage@garbage.com  garbage_pwd
     Page Should Contain     error
 
-
+Faulty Multiple Log ins
+    # Info
+    [Documentation]  Logging in and try to log in again.
+    [Tags]  Component Faulty
+    # Procedure
+    log_in.Log in user  ${email_1}  ${pass_1}
+    Page Should Not Contain     error
+    log_in.Log in user  ${email_1}  ${pass_1}
+    Page Should Not Contain     error
 *** Keywords ***
