@@ -9,14 +9,6 @@ Suite Setup      common.Open Site
 Suite Teardown   Close Browser
 
 *** Test Cases ***
-Log In and Out Test.
-    # Info
-    [Documentation]  Logging in and then out
-    [Tags]  Integrate log in and log ouy
-    # Procedure
-    log_in.Log in user  ${email_1}  ${pass_1}
-    Page Should Not Contain     error
-    log_out.Log out user
 
 Normal Login
     # Info
@@ -61,4 +53,32 @@ Faulty Multiple Log ins
     Page Should Not Contain     error
     log_in.Log in user  ${email_1}  ${pass_1}
     Page Should Not Contain     error
-*** Keywords ***
+
+Log out when you are not logged in
+    # Info
+    [Documentation]  Log out
+    [Tags]  Component Faulty
+    # Procedure
+    log_out.Log out user
+
+Log In and Out Test.
+    # Info
+    [Documentation]  Logging in and then out
+    [Tags]  Integrate log in and log ouy
+    # Procedure
+    log_in.Log in user  ${email_1}  ${pass_1}
+    Page Should Not Contain     error
+    log_out.Log out user
+
+Excessive Consecutive Log ins and outs
+    # Info
+    [Documentation]  Logging in and out multiple times
+    [Tags]  Component Excess
+    # Procedure
+    FOR    ${i}    IN RANGE    999999
+        Log     trial: ${i}
+        Exit For Loop If    ${i} == 9
+        log_in.Log in user  ${email_1}  ${pass_1}
+        Page Should Not Contain     error
+        log_out.Log out user
+    END
