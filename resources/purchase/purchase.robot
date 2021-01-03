@@ -9,8 +9,9 @@ Resource    ../log_in/log_in.robot
 Purchase Cart
     #make sure we made it correctly
     Location Should Be  ${order}
+    Sleep  2s
     #if cart is empty, exit
-    Page Should Not Contain     Your shopping cart is empty.
+    Element Should Not Contain  xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a     empty
     #Proceed simply
     Press Keys  xpath://*[@id="center_column"]/p[2]/a[1]    RETURN
     Press Keys  name=processAddress    RETURN

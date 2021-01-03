@@ -13,6 +13,15 @@ Suite Setup      common.Open Site
 Suite Teardown   Close Browser
 
 *** Test Cases ***
+Purchase Item
+    log_in.Log in user  ${email_1}  ${pass_1}
+    Go To   ${website}
+    Click Element   xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]
+    Wait Until Element Is Visible   xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/a  timeout= 10s
+    Page Should Contain     Product successfully added to your shopping cart
+    Click Element   xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/a
+    Purchase Stuff
+    
 
 *** Keywords ***
 # From Ev: To apply the purchased stuff, use this keyword.
