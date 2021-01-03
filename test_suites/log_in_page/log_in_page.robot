@@ -71,7 +71,7 @@ Log out when you are not logged in
 Log In and Out Test.
     # Info
     [Documentation]  Logging in and then out
-    [Tags]  Integrate log in and log ouy
+    [Tags]  Integrate
     # Procedure
     log_in.Log in user  ${email_1}  ${pass_1}
     Page Should Not Contain     error

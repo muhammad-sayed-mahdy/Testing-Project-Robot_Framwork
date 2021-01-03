@@ -68,9 +68,7 @@ Sign up steps
     ${rand_int}=    Evaluate    random.sample(range(1, 32),1)    random
     ${rand_str}=    Convert To String  ${rand_int}[0]
     Select From List By Value   name=days     ${rand_str}
-    ${rand_int}=    Evaluate    random.sample(range(1, 13[Arguments]    ${fname}  ${lname}  ${email}  ${password}  ${company}  ${address}  ${city}  ${zip}  ${phone}
-    
-    ),1)    random
+    ${rand_int}=    Evaluate    random.sample(range(1, 13),1)    random
     ${rand_str}=    Convert To String  ${rand_int}[0]
     Select From List By Value   name=months     ${rand_str}
     ${rand_int}=    Evaluate    random.sample(range(1900, 2022),1)    random
