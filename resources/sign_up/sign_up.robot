@@ -14,29 +14,35 @@ Test Teardown   Close Browser
 *** Test Cases ***
 Sign Up test Cases
     Sign Up
-    
+
 
 *** Keywords ***
 Generate Random info
-    ${fname}=       Generate Random String    8     [LOWER]
-    ${lname}=       Generate Random String    8     [LOWER]
-    ${var}=         Generate Random String    10    [LETTERS][NUMBERS]
-    ${email}=       Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
-    ${password}=    Generate Random String    10    [LETTERS][NUMBERS]
-    ${company}=     Generate Random String    12    [LETTERS][NUMBERS]
-    ${address}=     Generate Random String    22    [LETTERS][NUMBERS]
-    ${city}=        Generate Random String    8     [LETTERS][NUMBERS]
-    ${zip}=         Generate Random String    5     [NUMBERS]
-    ${phone}=       Generate Random String    12    [NUMBERS]
-
-    [return]    ${fname}  ${lname}  ${email}  ${password}  ${company}  ${address}  ${city}  ${zip}  ${phone}
+    ${EV}=   Generate Random String    8     [LOWER]
+    Set Global Variable     ${fname}    ${EV}
+    ${EV}=   Generate Random String    8     [LOWER]
+    Set Global Variable     ${lname}    ${EV}   
+    ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
+    ${EV}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
+    Set Global Variable     ${email}    ${Ev}      
+    ${EV}=   Generate Random String     10    [LETTERS][NUMBERS]
+    Set Global Variable     ${password}  ${Ev}  
+    ${EV}=   Generate Random String     12    [LETTERS][NUMBERS]
+    Set Global Variable     ${company}  ${Ev}    
+    ${EV}=   Generate Random String     22    [LETTERS][NUMBERS]
+    Set Global Variable     ${address}  ${Ev}    
+    ${EV}=   Generate Random String     8     [LETTERS][NUMBERS]
+    Set Global Variable     ${city}     ${Ev}         
+    ${EV}=   Generate Random String     5     [NUMBERS]
+    Set Global Variable     ${zip}      ${Ev}         
+    ${EV}=   Generate Random String     12    [NUMBERS]
+    Set Global Variable     ${phone}    ${Ev}       
     
 Sign Up
     #go to the sign up /login page
-    # Go To  ${login_page}
-    Open browser    ${login_page}   chrome
+    Go To  ${login_page}
     #fetch random info
-    ${fname}  ${lname}  ${email}  ${password}  ${company}  ${address}  ${city}  ${zip}  ${phone}=     Generate Random info   
+    Generate Random info   
     #if this is the page, ie. user not already signed in
     ${status}   ${value}=    Run keyword and ignore error  Page should contain  Sign in
     #add email

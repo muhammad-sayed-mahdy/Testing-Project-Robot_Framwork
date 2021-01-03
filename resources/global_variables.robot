@@ -3,21 +3,22 @@ Library     BuiltIn
 
 
 *** Variables ***
+#Log in Var
 ${email_1}    test_1@test.com
 ${pass_1}     robotframeworkpass
 ${user_1}     test
-
 ${email_2}    test_2@test.com
 ${pass_2}     robotframeworkpass
 ${user_2}     test
 
+#Pages
 ${website}      http://automationpractice.com/index.php
 ${browser}      chrome
 ${login_page}   http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${logout_page}  http://automationpractice.com/index.php?mylogout=
-${sign_up_prefix}  @ev.com
 
-                                    # Various Stuff #                     
+
+# Various Stuff #                     
 ${contact}  id:contact-link             # contact button in the navigation bar
 ${email_text}   id:email                # email html element to write text in
 ${order_ref}    id:id_order             # html element to write order ref
@@ -27,3 +28,15 @@ ${message}  id:message                  # html element to write your message
 ${upload_bad_file}  ${EXECDIR}${/}upload_files/script.py     # upload file with .py extension
 ${upload_txt_file}  ${EXECDIR}${/}upload_files/text.txt     # upload file with .txt extension
 ${upload_img_file}  ${EXECDIR}${/}upload_files/img.png     # upload file with .png extension
+
+# Sign up vars
+${sign_up_prefix}  @ev.com
+${fname}       none         
+${lname}       none         
+${email}       none         
+${password}    none         
+${company}     none     
+${address}     none     
+${city}        none 
+${zip}         none 
+${phone}       none     
