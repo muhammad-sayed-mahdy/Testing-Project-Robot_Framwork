@@ -71,7 +71,7 @@ Sign up steps
     Select From List By Value   name=id_state     ${rand_str}
     
 Sign Up
-    [Arguments]     ${random}= 1
+    [Arguments]     ${random}= 1    ${ignore_error}= 1
     #go to the sign up /login page
     Go To  ${login_page}
     #fetch random info and update it globally
@@ -90,5 +90,5 @@ Sign Up
     Run Keyword If     '${status}' == 'PASS'          Sign up steps
     #register
     Press Keys      id:submitAccount     RETURN
-    Page should contain  Sign out
+    Run Keyword if     ${ignore_error} == 1      Page should contain  Sign out
     

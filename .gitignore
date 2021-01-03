@@ -1,4 +1,9 @@
-log.html
-output.xml
-report.html
-selenium-screenshot*
+resources/*/log.html
+resources/*/output.xml
+resources/*/report.html
+resources/*/selenium-screenshot*
+
+test_suites/*/log.html
+test_suites/*/output.xml
+test_suites/*/report.html
+test_suites/*/selenium-screenshot*
