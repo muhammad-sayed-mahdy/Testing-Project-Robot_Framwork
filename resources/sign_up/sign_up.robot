@@ -4,17 +4,7 @@ Library     String
 Library     BuiltIn
 
 Resource    ../global_variables.robot
-
-# Resource    ../common/common.robot
-
-# Test Setup      common.Open Site
-# Test Teardown   Close Browser
-
-# *** Variables ***
-
-# *** Test Cases ***
-# Sign Up test Cases
-#     Sign Up
+Resource    ../log_out/log_out.robot
 
 
 *** Keywords ***
@@ -85,6 +75,10 @@ Sign Up
     Go To  ${login_page}
     #fetch random info and update it globally
     Generate Random info   
+    #if this is the page, ie. user not already signed in
+    ${status}   ${value}=    Run keyword and ignore error  Page should contain  Sign in
+    Run Keyword Unless     '${status}' == 'PASS'      log_out.Log out user
+    #AGAIN
     #if this is the page, ie. user not already signed in
     ${status}   ${value}=    Run keyword and ignore error  Page should contain  Sign in
     #add email
