@@ -16,7 +16,7 @@ ${website}      http://automationpractice.com/index.php
 ${browser}      chrome
 ${login_page}   http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${logout_page}  http://automationpractice.com/index.php?mylogout=
-
+${order}        http://automationpractice.com/index.php?controller=order
 
 # Various Stuff #                     
 ${contact}  id:contact-link             # contact button in the navigation bar
