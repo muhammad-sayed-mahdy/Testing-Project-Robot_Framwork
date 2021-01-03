@@ -71,10 +71,11 @@ Sign up steps
     Select From List By Value   name=id_state     ${rand_str}
     
 Sign Up
+    [Arguments]     ${random}= 1
     #go to the sign up /login page
     Go To  ${login_page}
     #fetch random info and update it globally
-    Generate Random info   
+    Run Keyword if     ${random} == 1      Generate Random info   
     #if this is the page, ie. user not already signed in
     ${status}   ${value}=    Run keyword and ignore error  Page should contain  Sign in
     Run Keyword Unless     '${status}' == 'PASS'      log_out.Log out user

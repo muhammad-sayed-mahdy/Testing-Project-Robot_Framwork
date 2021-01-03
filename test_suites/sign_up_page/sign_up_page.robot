@@ -1,5 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library     String
+Library     BuiltIn
 
 Resource    ../../resources/common/common.robot     #browser stuff
 Resource    ../../resources/log_in/log_in.robot     #log in
@@ -33,15 +35,9 @@ Sign up and logging multiple times
         Exit For Loop If    ${i} == 9
         Sign up and logging KW
     END
-    
-
-
 
 *** Keywords ***
 Sign up and logging KW
-    # Info
-    [Documentation]  Sign Up with log out and log in
-    [Tags]  Integreate
     # Procedure
     sign_up.Sign Up
     Page Should Not Contain     error
@@ -49,4 +45,3 @@ Sign up and logging KW
     Page Should Not Contain     error
     log_in.Log in user  ${email}  ${password}
     Page Should Not Contain     error
-    
