@@ -4,7 +4,7 @@ Library     BuiltIn
 
 *** Variables ***
 #Log in Var
-${email_1}    test_1@test.com
+${email_1}    test_1@test.comm
 ${pass_1}     robotframeworkpass
 ${user_1}     test
 ${email_2}    test_2@test.com
