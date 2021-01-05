@@ -18,10 +18,7 @@ Add New Address
     [Documentation]  Add new address
     [Tags]  Component
     # Procedure
-    Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
-    my_addresses.Fill In Required Fields
-    Click Element  id:submitAddress
+    Add New Address
     my_addresses.Verify Changed Info  
 
 Add New Address with existing alias
@@ -29,12 +26,13 @@ Add New Address with existing alias
     [Documentation]  Add new address with existing alias
     [Tags]  Component  Faulty
     # Procedure
+    ${existing_alias}=  Get Text  xpath://*[@id="center_column"]/div[1]/div[1]/div[1]/ul/li[1]/h3
     Click Element  xpath://*[@id="center_column"]/div[2]/a
     common.Generate Random info
     my_addresses.Fill In Required Fields
-    Input Text  id:alias  My address  clear=True
+    Input Text  id:alias  ${existing_alias}  clear=True
     Click Element  id:submitAddress
-    Page Should Contain  The alias "My address" has already been used. Please select another one.
+    Page Should Contain  The alias "${existing_alias}" has already been used. Please select another one.
 
 Add New Address with no phone
     # Info

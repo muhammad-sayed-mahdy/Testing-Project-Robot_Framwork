@@ -8,13 +8,13 @@ Resource    ../common/common.robot
 
 *** Variables ***
 ${account_page}  http://automationpractice.com/index.php?controller=my-account
-${my_addresses_page}    http://automationpractice.com/index.php?controller=address
+${my_addresses_page}    http://automationpractice.com/index.php?controller=addresses
+${add_new_address_page}  http://automationpractice.com/index.php?controller=address
 
 *** Keywords ***
 
 Open Addresses Page
-    go to   ${account_page}
-    Click Element  xpath://*[@id="center_column"]/div/div[1]/ul/li[3]/a
+    go to   ${my_addresses_page}
 
 Fill In Required Fields
     Input Text  id:address1             ${address}    clear=True
@@ -28,6 +28,11 @@ Fill In Required Fields
     ${rand_str}=    Convert To String  ${rand_int}[0]
     Select From List By Value   name=id_state     ${rand_str}
 
+Add New Address
+    Go To  ${add_new_address_page}
+    common.Generate Random info
+    Fill In Required Fields
+    Click Element  id:submitAddress
 
 Verify Changed Info
     
