@@ -13,7 +13,7 @@ Suite Teardown   Close Browser
 Empty Field
     # Info
     [Documentation]  Testing out "Search" with empty field
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  NULL   NULL
     Page Should Contain Element     ${alert_search}
@@ -21,7 +21,7 @@ Empty Field
 Irrelevant Field
     # Info
     [Documentation]  Testing out "Search" with irrelevant field
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  hello  NULL
     Page Should Contain Element     ${alert_search}
@@ -29,7 +29,7 @@ Irrelevant Field
 Relevant Field NoSortBy
     # Info
     [Documentation]  Testing out "Search" with relevant field
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  Blouse     NULL
     Page Should Not Contain Element     ${alert_search}
@@ -37,7 +37,7 @@ Relevant Field NoSortBy
 Relevant Field SortBy Lowest First
     # Info
     [Documentation]  Testing out "Search" with relevant field SortBy Lowest First
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  Dress      Price: Highest first
     Page Should Not Contain Element     ${alert_search}
@@ -48,7 +48,7 @@ Relevant Field SortBy Lowest First
 Relevant Field SortBy Highest First
     # Info
     [Documentation]  Testing out "Search" with relevant field SortBy Lowest First
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  Dress      Price: Lowest first
     Page Should Not Contain Element     ${alert_search}
@@ -59,7 +59,7 @@ Relevant Field SortBy Highest First
 Relevant Field SortBy A To Z
     # Info
     [Documentation]  Testing out "Search" with relevant field SortBy A to Z
-    [Tags]  Component
+    [Tags]  Component Data-Driven
     # Procedure
     Fill Search  Dress      Product Name: A to Z
     Page Should Not Contain Element     ${alert_search}

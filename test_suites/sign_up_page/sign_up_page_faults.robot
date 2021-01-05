@@ -19,7 +19,7 @@ Sign up should NOT FAIL 1
     [Documentation]  Added number to user name
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname1   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
+    sign_up.Embed sign up values manually   fname1   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Not Contain     error
 
@@ -30,7 +30,7 @@ Sign up should FAIL 1
     [Documentation]  Since numbers are not allowed, so should .^&*-\
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname.   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
+    sign_up.Embed sign up values manually   fname.   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Contain     error
 
@@ -41,7 +41,7 @@ Sign up should FAIL 2
     [Documentation]  Names allowes spaces in it. and that's wrong.
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname with spaces   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
+    sign_up.Embed sign up values manually   fname with spaces   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Contain     error
 
@@ -52,7 +52,7 @@ Sign up should FAIL 3
     [Documentation]  Zipcode should follow 00000
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   111110   0120
+    sign_up.Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   111110   0120
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Contain     The Zip/Postal code you've entered is invalid. It must follow this format: 00000
 
@@ -63,7 +63,7 @@ Sign up should FAIL 4
     [Documentation]  Mobile phone with chars
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120kero
+    sign_up.Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120kero
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Contain     error
 
@@ -74,25 +74,6 @@ Sign up should NOT FAIL 2
     [Documentation]  Phone number with +-()
     [Tags]  Component Faulty
     # Procedure
-    Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   +(2)0120-752
+    sign_up.Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   +(2)0120-752
     sign_up.Sign Up     random=0    ignore_error=0
     Page Should Not Contain     error
-
-*** Keywords ***
-Embed sign up values manually
-    [Arguments]     ${arg1}  ${arg2}  ${arg3}  ${arg4}  ${arg5}  ${arg6}  ${arg7}  ${arg8}  ${arg9}  
-    Set Global Variable     ${fname}       ${arg1}         
-    Set Global Variable     ${lname}       ${arg2}
-    #To ensure always unique
-    ${var}=   Generate Random String     4    [LETTERS][NUMBERS]
-    ${EV}=   Catenate    SEPARATOR=  ${arg3}  ${var}
-    Set Global Variable     ${email}       ${EV}         
-    Set Global Variable     ${password}    ${arg4}         
-    Set Global Variable     ${company}     ${arg5}     
-    Set Global Variable     ${address}     ${arg6}     
-    Set Global Variable     ${city}        ${arg7} 
-    Set Global Variable     ${zip}         ${arg8} 
-    Set Global Variable     ${phone}       ${arg9}     
-    # Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
-
-    

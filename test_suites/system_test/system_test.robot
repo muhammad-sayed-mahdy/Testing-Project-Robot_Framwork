@@ -18,7 +18,7 @@ Suite Setup      common.Open Site
 Suite Teardown   Close Browser
 
 *** Test Cases ***
-Normal Sign Up
+System Test
     # Info
     [Documentation]  Normal Use Case
     [Tags]  System Test
@@ -29,7 +29,6 @@ Normal Sign Up
     Page Should Not Contain     error
 
     # Change personal info .. SAYED
-
     #Change Lastname
     Open personal information
     ${new_lastname}=   Generate Random String    8     [LOWER]
