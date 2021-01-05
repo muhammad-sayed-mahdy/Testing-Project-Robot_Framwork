@@ -38,7 +38,9 @@ Add to cart
     # testing add to cart in comparison
     Mouse Over      xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img
     Click Element  xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a
+    Sleep  1s
     Click Element  xpath://*[@id="center_column"]/div[3]/div[2]/form/button
+    Sleep  1s
     Click Element  xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[5]/div/div/a[1]
     Continue Shopping  4
     Click Element  xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i

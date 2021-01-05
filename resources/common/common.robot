@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 
 Resource    ../global_variables.robot
 Resource    ../sign_up/sign_up.robot
+Resource    ../log_in/log_in.robot
 
 
 *** Keywords ***
@@ -13,6 +14,10 @@ Open Site
 Open Site and Create a new user
     Open Site
     sign_up.Sign Up
+
+Open Site and log in
+    Open Site
+    log_in.Log in user  ${email_1}  ${pass_1}
 
 Generate Random info
     ${EV}=   Generate Random String    8     [LOWER]

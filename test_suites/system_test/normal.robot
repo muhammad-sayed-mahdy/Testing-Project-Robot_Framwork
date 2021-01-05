@@ -29,6 +29,7 @@ Normal Sign Up
     Page Should Not Contain     error
 
     # Change personal info .. SAYED
+
     #Change Lastname
     Open personal information
     ${new_lastname}=   Generate Random String    8     [LOWER]
@@ -37,6 +38,7 @@ Normal Sign Up
     personal_info.Save Info
     Page Should Contain  Your personal information has been successfully updated.
     Verify Changed Info  ${new_lastname}
+
     #Change Email
     ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
     ${new_email}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
@@ -47,6 +49,7 @@ Normal Sign Up
     Element Attribute Value Should Be  id:email  value  ${new_email}
     Set Global Variable     ${email}  ${new_email} 
 
+                                                    #Addresses...Sayed
 
     #Login and Logout
     log_out.Log out user
@@ -70,17 +73,31 @@ Normal Sign Up
 
     # Add to Cart   .. Kareem
     addtocart.Add to cart
-    
-    # Compare       .. Kareem
-    
+    Click Element   xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a
+
+
+                                            # Compare       .. Kareem
+
     # Purchase
     purchase.Purchase Cart
-
-    # Order History .. Sayed
-
 
     # Log out
     log_out.Log out user
     Sleep  1s
     Page Should Not Contain     Sign out
+
+    #Restart
+    Close Browser
+    common.Open Site
+    log_in.Log in user  ${email}  ${password}
+    Page Should Not Contain     error
+
+    # Order History .. Sayed
+    personal_info.Test Order History
+
+    #End of Discussion
+    log_out.Log out user
+    Sleep  1s
+    Page Should Not Contain     Sign out
+
     
