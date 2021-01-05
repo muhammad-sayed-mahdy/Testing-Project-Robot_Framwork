@@ -18,7 +18,7 @@ Suite Setup      common.Open Site
 Suite Teardown   Close Browser
 
 *** Test Cases ***
-Normal Sign Up
+System Test
     # Info
     [Documentation]  Normal Use Case
     [Tags]  System Test
