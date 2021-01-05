@@ -43,6 +43,7 @@ Add to cart
     Sleep  1s
     Click Element  xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[5]/div/div/a[1]
     Continue Shopping  4
+    Click Element  xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i
 
     # remove two instances from cart
     Mouse Over  xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a

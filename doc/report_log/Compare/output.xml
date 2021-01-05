@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.3 on linux)" generated="20210105 23:25:01.856" rpa="false">
+<suite id="s1" name="Compare" source="/media/kareem/New Volume/cmp4/First Term/Testing/Testing-Project-Robot_Framwork/test_suites/home/compare.robot">
+<kw name="Open Site" library="common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210105 23:25:02.019" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210105 23:25:02.018" endtime="20210105 23:25:09.651"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:02.018" endtime="20210105 23:25:09.651"></status>
+</kw>
+<test id="s1-t1" name="Compare Passed Case">
+<kw name="Log in user" library="log_in">
+<arguments>
+<arg>${email_1}</arg>
+<arg>${pass_1}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${login_page}</arg>
+</arguments>
+<msg timestamp="20210105 23:25:09.656" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20210105 23:25:09.656" endtime="20210105 23:25:11.093"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210105 23:25:11.127" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210105 23:25:11.094" endtime="20210105 23:25:11.127"></status>
+</kw>
+<msg timestamp="20210105 23:25:11.127" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210105 23:25:11.127" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210105 23:25:11.094" endtime="20210105 23:25:11.127"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log in</arg>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Log in" library="log_in">
+<arguments>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Authentication</arg>
+</arguments>
+<status status="PASS" starttime="20210105 23:25:11.129" endtime="20210105 23:25:11.141"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${user_email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210105 23:25:11.142" level="INFO">Typing text 'test_1@test.comm' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210105 23:25:11.142" endtime="20210105 23:25:11.251"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passwd</arg>
+<arg>${user_pass}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210105 23:25:11.251" level="INFO">Typing text 'robotframeworkpass' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210105 23:25:11.251" endtime="20210105 23:25:11.390"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id:SubmitLogin</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210105 23:25:11.390" level="INFO">Sending key(s) ('RETURN',) to id:SubmitLogin element.</msg>
+<msg timestamp="20210105 23:25:16.766" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210105 23:25:16.766" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210105 23:25:11.390" endtime="20210105 23:25:16.774"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:11.128" endtime="20210105 23:25:16.774"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:11.127" endtime="20210105 23:25:16.774"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:09.654" endtime="20210105 23:25:16.774"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+</arguments>
+<msg timestamp="20210105 23:25:16.775" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210105 23:25:16.775" endtime="20210105 23:25:18.541"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="block_top_menu"]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:25:18.542" level="INFO">Clicking element 'xpath://*[@id="block_top_menu"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210105 23:25:18.542" endtime="20210105 23:25:22.077"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210105 23:25:22.079" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210105 23:25:22.077" endtime="20210105 23:25:22.370"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:25:22.371" level="INFO">Clicking element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210105 23:25:22.371" endtime="20210105 23:25:22.541"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[3]/div[2]/form/button</arg>
+</arguments>
+<msg timestamp="20210105 23:25:22.542" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20210105 23:25:22.542" endtime="20210105 23:25:27.471"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i</arg>
+</arguments>
+<msg timestamp="20210105 23:25:27.471" level="INFO">Clicking element 'xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i'.</msg>
+<status status="PASS" starttime="20210105 23:25:27.471" endtime="20210105 23:25:28.381"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="block_top_menu"]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:25:28.385" level="INFO">Clicking element 'xpath://*[@id="block_top_menu"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210105 23:25:28.384" endtime="20210105 23:25:31.609"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[3]/div[2]/form/button</arg>
+<arg>(0)</arg>
+</arguments>
+<msg timestamp="20210105 23:25:31.645" level="INFO">Element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button' contains text '(0)'.</msg>
+<status status="PASS" starttime="20210105 23:25:31.609" endtime="20210105 23:25:31.645"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:09.652" endtime="20210105 23:25:31.646" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Compare Failed Case">
+<kw name="Log in user" library="log_in">
+<arguments>
+<arg>${email_1}</arg>
+<arg>${pass_1}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${login_page}</arg>
+</arguments>
+<msg timestamp="20210105 23:25:31.648" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20210105 23:25:31.648" endtime="20210105 23:26:08.286"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210105 23:26:08.499" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210105 23:26:08.327" endtime="20210105 23:26:08.500"></status>
+</kw>
+<msg timestamp="20210105 23:26:08.501" level="FAIL">Page should have contained text 'Sign in' but did not.</msg>
+<status status="FAIL" starttime="20210105 23:26:08.287" endtime="20210105 23:26:08.501"></status>
+</kw>
+<msg timestamp="20210105 23:26:08.501" level="INFO">${status} = FAIL</msg>
+<msg timestamp="20210105 23:26:08.501" level="INFO">${value} = Page should have contained text 'Sign in' but did not.</msg>
+<status status="PASS" starttime="20210105 23:26:08.286" endtime="20210105 23:26:08.501"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log in</arg>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<status status="PASS" starttime="20210105 23:26:08.501" endtime="20210105 23:26:08.502"></status>
+</kw>
+<status status="PASS" starttime="20210105 23:25:31.647" endtime="20210105 23:26:08.502"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+</arguments>
+<msg timestamp="20210105 23:26:08.503" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210105 23:26:08.502" endtime="20210105 23:26:10.997"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="block_top_menu"]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:26:10.997" level="INFO">Clicking element 'xpath://*[@id="block_top_menu"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210105 23:26:10.997" endtime="20210105 23:26:26.223"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210105 23:26:26.224" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210105 23:26:26.224" endtime="20210105 23:26:26.526"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:26:26.527" level="INFO">Clicking element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210105 23:26:26.527" endtime="20210105 23:26:26.736"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[3]/div[2]/form/button</arg>
+</arguments>
+<msg timestamp="20210105 23:26:26.737" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20210105 23:26:26.736" endtime="20210105 23:26:29.161"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="block_top_menu"]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:26:29.162" level="INFO">Clicking element 'xpath://*[@id="block_top_menu"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210105 23:26:29.162" endtime="20210105 23:26:31.138"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210105 23:26:31.139" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210105 23:26:31.139" endtime="20210105 23:26:31.427"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210105 23:26:31.429" level="INFO">Clicking element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210105 23:26:31.428" endtime="20210105 23:26:31.580"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210105 23:26:41.581" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210105 23:26:31.581" endtime="20210105 23:26:41.582"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[3]/div[2]/form/button</arg>
+<arg>(1)</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210105 23:26:41.878" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210105 23:26:41.695" endtime="20210105 23:26:41.878"></status>
+</kw>
+<msg timestamp="20210105 23:26:41.878" level="FAIL">Element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button' should have contained text '(1)' but its text was 'Compare (2)'.</msg>
+<status status="FAIL" starttime="20210105 23:26:41.583" endtime="20210105 23:26:41.879"></status>
+</kw>
+<status status="FAIL" starttime="20210105 23:25:31.646" endtime="20210105 23:26:41.879" critical="yes">Element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button' should have contained text '(1)' but its text was 'Compare (2)'.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210105 23:26:41.881" endtime="20210105 23:26:41.962"></status>
+</kw>
+<status status="FAIL" starttime="20210105 23:25:01.857" endtime="20210105 23:26:41.962"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Compare">Compare</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
