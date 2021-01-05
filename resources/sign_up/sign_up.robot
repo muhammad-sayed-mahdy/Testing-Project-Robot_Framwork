@@ -72,4 +72,22 @@ Sign Up
     #register
     Press Keys      id:submitAccount     RETURN
     Run Keyword if     ${ignore_error} == 1      Page should contain  Sign out
+
+
+Embed sign up values manually
+    [Arguments]     ${arg1}  ${arg2}  ${arg3}  ${arg4}  ${arg5}  ${arg6}  ${arg7}  ${arg8}  ${arg9}  
+    Set Global Variable     ${fname}       ${arg1}         
+    Set Global Variable     ${lname}       ${arg2}
+    #To ensure always unique
+    ${var}=   Generate Random String     4    [LETTERS][NUMBERS]
+    ${EV}=   Catenate    SEPARATOR=  ${arg3}  ${var}
+    Set Global Variable     ${email}       ${EV}         
+    Set Global Variable     ${password}    ${arg4}         
+    Set Global Variable     ${company}     ${arg5}     
+    Set Global Variable     ${address}     ${arg6}     
+    Set Global Variable     ${city}        ${arg7} 
+    Set Global Variable     ${zip}         ${arg8} 
+    Set Global Variable     ${phone}       ${arg9}     
+    # Embed sign up values manually   fname   lname   mail@mail.com   pass123     compx   addressx    cityx   11111   0120
+
     

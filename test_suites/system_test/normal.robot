@@ -29,7 +29,6 @@ Normal Sign Up
     Page Should Not Contain     error
 
     # Change personal info .. SAYED
-
     #Change Lastname
     Open personal information
     ${new_lastname}=   Generate Random String    8     [LOWER]
