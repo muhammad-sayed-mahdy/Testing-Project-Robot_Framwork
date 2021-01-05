@@ -1,5 +1,5 @@
 # What is this?
-    Testing Project, testing the demo shopping website "automationpractice.com", using Robot Framework.
+    Testing Project, testing the demo shopping website automationpractice.com , using Robot Framework.
 
 ## Installation
     + pip installations:
@@ -22,3 +22,15 @@
 ## To clear report files
     ~ bash clear.sh
 
+## Report
+    https://docs.google.com/document/d/1byO8TZnRvq6GX-jwOGBwIYQhYq61-OZ-knSr4uFEoEk/edit?usp=sharing
+
+## To Do
+    2- Demo / Presentation (Video)
+        10-15 mins
+        our strength points
+
+
+
+    *- Submit to Dr. Ahmed
+    *- NO COMPRESSED FILES ?!

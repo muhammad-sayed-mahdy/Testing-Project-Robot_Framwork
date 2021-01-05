@@ -34,8 +34,8 @@ ${upload_img_file}  ${EXECDIR}${/}upload_files/img.png     # upload file with .p
 
 ${search}   id:search_query_top             # html element search text in the navigation bar
 ${submit}   name:submit_search              # html element search button in the navigation bar         <-----
-${alert_search}  class:alert alert-warning    # html element for alert search                          <-----
-
+# ${alert_search}  class:alert alert-warning    # html element for alert search                          <-----
+${alert_search}     xpath://*[@id="center_column"]/p
 # Sign up vars
 ${sign_up_prefix}  @ev.com
 ${fname}       none         
