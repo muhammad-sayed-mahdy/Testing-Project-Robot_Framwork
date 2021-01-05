@@ -7,3 +7,4 @@ test_suites/*/log.html
 test_suites/*/output.xml
 test_suites/*/report.html
 test_suites/*/selenium-screenshot*
+testing_demo.mp4
