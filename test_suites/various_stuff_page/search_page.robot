@@ -15,7 +15,7 @@ Empty Field
     [Documentation]  Testing out "Search" with empty field
     [Tags]  Component
     # Procedure
-    Fill Search  NULL
+    Fill Search  NULL   NULL
     Page Should Contain Element     ${alert_search}
 
 Irrelevant Field
@@ -23,13 +23,45 @@ Irrelevant Field
     [Documentation]  Testing out "Search" with irrelevant field
     [Tags]  Component
     # Procedure
-    Fill Search  hello
+    Fill Search  hello  NULL
     Page Should Contain Element     ${alert_search}
 
-Relevant Field
+Relevant Field NoSortBy
     # Info
     [Documentation]  Testing out "Search" with relevant field
     [Tags]  Component
     # Procedure
-    Fill Search  Blouse
+    Fill Search  Blouse     NULL
     Page Should Not Contain Element     ${alert_search}
+
+Relevant Field SortBy Lowest First
+    # Info
+    [Documentation]  Testing out "Search" with relevant field SortBy Lowest First
+    [Tags]  Component
+    # Procedure
+    Fill Search  Dress      Price: Highest first
+    Page Should Not Contain Element     ${alert_search}
+    Wait Until Page Contains Element    ${first_div_sortby}
+    Element Should Contain    ${first_div_sortby}     Printed Dress
+
+
+Relevant Field SortBy Highest First
+    # Info
+    [Documentation]  Testing out "Search" with relevant field SortBy Lowest First
+    [Tags]  Component
+    # Procedure
+    Fill Search  Dress      Price: Lowest first
+    Page Should Not Contain Element     ${alert_search}
+    Wait Until Page Contains Element    ${first_div_sortby}
+    Element Should Contain    ${first_div_sortby}     Faded Short Sleeve T-shirts
+
+
+Relevant Field SortBy A To Z
+    # Info
+    [Documentation]  Testing out "Search" with relevant field SortBy A to Z
+    [Tags]  Component
+    # Procedure
+    Fill Search  Dress      Product Name: A to Z
+    Page Should Not Contain Element     ${alert_search}
+    Wait Until Page Contains Element    ${first_div_sortby}
+    Element Should Contain    ${first_div_sortby}     Blouse

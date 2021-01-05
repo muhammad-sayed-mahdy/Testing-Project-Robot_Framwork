@@ -33,9 +33,11 @@ ${upload_img_file}  ${EXECDIR}${/}upload_files/img.png     # upload file with .p
                             # search
 
 ${search}   id:search_query_top             # html element search text in the navigation bar
-${submit}   name:submit_search              # html element search button in the navigation bar         <-----
-# ${alert_search}  class:alert alert-warning    # html element for alert search                          <-----
-${alert_search}     xpath://*[@id="center_column"]/p
+${submit}   name:submit_search              # html element search button in the navigation bar
+${alert_search}     xpath://*[@id="center_column"]/p    # html element for alert message
+${sortby}    selectProductSort   # html element for dropdown box filter
+${first_div_sortby}     xpath:html/body/div[1]/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/h5/a    # html element for first element in ul (search)
+
 # Sign up vars
 ${sign_up_prefix}  @ev.com
 ${fname}       none         
