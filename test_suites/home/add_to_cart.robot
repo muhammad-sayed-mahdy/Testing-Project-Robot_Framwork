@@ -17,6 +17,8 @@ Add to cart
     # testing add to Cart in popular list
     log_in.Log in user  ${email_1}  ${pass_1}
     Go To   ${website}
+    Mouse Over      xpath://*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img
+    # Wait Until Element Is Visible   xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]  timeout= 10s
     Click Element   xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]
     addtocart.Continue Shopping  1
 
@@ -40,7 +42,7 @@ Add to cart
     # remove two instances from cart
     Mouse Over  xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a
     Click Element  xpath://*[@id="header"]/div[3]/div/div/div[3]/div/div/div/div/dl/dt/span/a
-    Wait Until Element Contains     xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]  2
+    Wait Until Element Contains     xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]  2  timeout= 10s
 
     # add to cart from best sellers
     Click Element  xpath://*[@id="header_logo"]/a/img
