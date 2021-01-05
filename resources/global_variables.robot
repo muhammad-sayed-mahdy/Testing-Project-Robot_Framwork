@@ -38,6 +38,14 @@ ${alert_search}     xpath://*[@id="center_column"]/p    # html element for alert
 ${sortby}    selectProductSort   # html element for dropdown box filter
 ${first_div_sortby}     xpath:html/body/div[1]/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/h5/a    # html element for first element in ul (search)
 
+
+                            # bottom navbar
+${navbar_woman}     xpath:/html/body/div[1]/div[3]/footer/div/section[2]/div/div/ul/li/a
+${navbar_specials}  xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[1]/a
+${navbar_new_products}  xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[2]/a
+${navbar_best_sellers}  xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[3]/a
+${alert_navbar}     xpath:/html/body/div[1]/div[2]/div/div[3]/div[2]/p
+
 # Sign up vars
 ${sign_up_prefix}  @ev.com
 ${fname}       none         
