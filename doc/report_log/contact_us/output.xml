@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.12 on linux)" generated="20210106 01:54:18.813" rpa="false">
+<suite id="s1" name="Contact Us Page" source="/home/evram/Desktop/projects/testing_project/test_suites/contact_us/contact_us_page.robot">
+<kw name="Open Site" library="common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:18.977" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210106 01:54:18.976" endtime="20210106 01:54:49.625"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:18.976" endtime="20210106 01:54:49.626"></status>
+</kw>
+<test id="s1-t1" name="Empty Fields">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:49.630" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:54:49.629" endtime="20210106 01:54:51.453"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>NULL</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 01:54:51.460" endtime="20210106 01:54:51.462"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:51.464" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:54:51.463" endtime="20210106 01:54:51.609"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:51.611" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:54:51.609" endtime="20210106 01:54:51.768"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:51.769" level="INFO">Typing text '' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:54:51.768" endtime="20210106 01:54:51.854"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:51.854" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:54:51.854" endtime="20210106 01:54:52.960"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:51.454" endtime="20210106 01:54:52.960"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:54:52.978" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:54:52.960" endtime="20210106 01:54:52.978"></status>
+</kw>
+<doc>Testing out "Contact us" with all fileds empty</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:54:49.626" endtime="20210106 01:54:52.978" critical="yes"></status>
+</test>
+<test id="s1-t2" name="NoSubject Field">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:52.981" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:54:52.981" endtime="20210106 01:54:54.222"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>NULL</arg>
+<arg>customer@test.com</arg>
+<arg>${EMPTY}</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 01:54:54.223" endtime="20210106 01:54:54.224"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:54.224" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:54:54.224" endtime="20210106 01:54:54.347"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:54.348" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:54:54.347" endtime="20210106 01:54:54.435"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:54.436" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:54:54.436" endtime="20210106 01:54:54.535"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:54.535" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:54:54.535" endtime="20210106 01:54:55.620"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:54.223" endtime="20210106 01:54:55.620"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:54:55.638" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:54:55.621" endtime="20210106 01:54:55.638"></status>
+</kw>
+<doc>Testing out "Contact us" with Subject field empty</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:54:52.979" endtime="20210106 01:54:55.639" critical="yes"></status>
+</test>
+<test id="s1-t3" name="NoEmail Field">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:55.642" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:54:55.642" endtime="20210106 01:54:56.797"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:56.800" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:54:56.799" endtime="20210106 01:54:56.891"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:56.798" endtime="20210106 01:54:56.891"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:56.892" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:54:56.891" endtime="20210106 01:54:56.984"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:56.985" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:54:56.985" endtime="20210106 01:54:57.072"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:57.072" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:54:57.072" endtime="20210106 01:54:57.168"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:57.168" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:54:57.168" endtime="20210106 01:54:58.570"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:56.797" endtime="20210106 01:54:58.571"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:54:58.599" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:54:58.571" endtime="20210106 01:54:58.600"></status>
+</kw>
+<doc>Testing out "Contact us" with Email field empty</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:54:55.639" endtime="20210106 01:54:58.600" critical="yes"></status>
+</test>
+<test id="s1-t4" name="WrongEmailFormat Field">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:58.602" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:54:58.602" endtime="20210106 01:54:59.791"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>wrongemail</arg>
+<arg>${EMPTY}</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:54:59.793" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:54:59.793" endtime="20210106 01:54:59.881"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:59.792" endtime="20210106 01:54:59.881"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:59.882" level="INFO">Typing text 'wrongemail' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:54:59.881" endtime="20210106 01:54:59.988"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:54:59.988" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:54:59.988" endtime="20210106 01:55:00.092"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:00.093" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:00.092" endtime="20210106 01:55:00.196"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:00.197" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:00.197" endtime="20210106 01:55:01.386"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:59.791" endtime="20210106 01:55:01.387"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:01.403" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:01.387" endtime="20210106 01:55:01.403"></status>
+</kw>
+<doc>Testing out "Contact us" with Wrong Email format empty</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:54:58.601" endtime="20210106 01:55:01.404" critical="yes"></status>
+</test>
+<test id="s1-t5" name="NoMessage Field">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:01.408" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:55:01.407" endtime="20210106 01:55:02.836"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>customer@test.com</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:02.841" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:55:02.840" endtime="20210106 01:55:03.012"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:02.838" endtime="20210106 01:55:03.013"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:03.014" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:55:03.013" endtime="20210106 01:55:03.147"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:03.147" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:55:03.147" endtime="20210106 01:55:03.246"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:03.247" level="INFO">Typing text '' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:03.247" endtime="20210106 01:55:03.331"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:03.332" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:03.332" endtime="20210106 01:55:04.643"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:02.836" endtime="20210106 01:55:04.643"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:04.659" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:04.643" endtime="20210106 01:55:04.659"></status>
+</kw>
+<doc>Testing out "Contact us" with Message field empty</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:55:01.405" endtime="20210106 01:55:04.659" critical="yes"></status>
+</test>
+<test id="s1-t6" name="BadFile Ext">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:04.661" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:55:04.661" endtime="20210106 01:55:06.198"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id:fileUpload</arg>
+<arg>${upload_bad_file}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.199" level="INFO">Sending /home/evram/Desktop/projects/testing_project/test_suites/contact_us/upload_files/script.py to browser.</msg>
+<status status="PASS" starttime="20210106 01:55:06.199" endtime="20210106 01:55:06.243"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>customer@test.com</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.245" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:55:06.244" endtime="20210106 01:55:06.320"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:06.244" endtime="20210106 01:55:06.320"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.321" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:55:06.320" endtime="20210106 01:55:06.419"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.420" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:55:06.420" endtime="20210106 01:55:06.512"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.512" level="INFO">Typing text '' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:06.512" endtime="20210106 01:55:06.586"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:06.587" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:06.586" endtime="20210106 01:55:07.589"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:06.243" endtime="20210106 01:55:07.590"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:07.605" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:07.590" endtime="20210106 01:55:07.605"></status>
+</kw>
+<doc>Testing out "Contact us" with Bad file extension</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:55:04.660" endtime="20210106 01:55:07.606" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TextFile Ext">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:07.608" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:55:07.607" endtime="20210106 01:55:08.835"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id:fileUpload</arg>
+<arg>${upload_txt_file}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:08.835" level="INFO">Sending /home/evram/Desktop/projects/testing_project/test_suites/contact_us/upload_files/text.txt to browser.</msg>
+<status status="PASS" starttime="20210106 01:55:08.835" endtime="20210106 01:55:08.882"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>customer@test.com</arg>
+<arg>${EMPTY}</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:08.883" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:55:08.883" endtime="20210106 01:55:08.966"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:08.883" endtime="20210106 01:55:08.966"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:08.967" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:55:08.966" endtime="20210106 01:55:09.079"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:09.081" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:55:09.080" endtime="20210106 01:55:09.169"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:09.170" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:09.170" endtime="20210106 01:55:09.269"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:09.269" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:09.269" endtime="20210106 01:55:13.642"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:08.882" endtime="20210106 01:55:13.642"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:13.673" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:13.642" endtime="20210106 01:55:13.673"></status>
+</kw>
+<doc>Testing out "Contact us" with text file extension</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:55:07.607" endtime="20210106 01:55:13.673" critical="yes"></status>
+</test>
+<test id="s1-t8" name="ImageFile Ext">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:13.675" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:55:13.675" endtime="20210106 01:55:15.391"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id:fileUpload</arg>
+<arg>${upload_img_file}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.392" level="INFO">Sending /home/evram/Desktop/projects/testing_project/test_suites/contact_us/upload_files/img.png to browser.</msg>
+<status status="PASS" starttime="20210106 01:55:15.391" endtime="20210106 01:55:15.457"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>customer@test.com</arg>
+<arg>${EMPTY}</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.459" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:55:15.459" endtime="20210106 01:55:15.575"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:15.458" endtime="20210106 01:55:15.575"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.576" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:55:15.575" endtime="20210106 01:55:15.668"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.670" level="INFO">Typing text '' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:55:15.668" endtime="20210106 01:55:15.757"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.757" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:15.757" endtime="20210106 01:55:15.848"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:15.849" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:15.848" endtime="20210106 01:55:18.673"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:15.457" endtime="20210106 01:55:18.674"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:18.696" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:18.674" endtime="20210106 01:55:18.696"></status>
+</kw>
+<doc>Testing out "Contact us" with image file extension</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:55:13.674" endtime="20210106 01:55:18.696" critical="yes"></status>
+</test>
+<test id="s1-t9" name="Normal Operation">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${contact}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:18.699" level="INFO">Clicking element 'id:contact-link'.</msg>
+<status status="PASS" starttime="20210106 01:55:18.698" endtime="20210106 01:55:20.329"></status>
+</kw>
+<kw name="Fill Fields" library="contact_us">
+<arguments>
+<arg>Customer service</arg>
+<arg>customer@test.com</arg>
+<arg>1B31H</arg>
+<arg>i am sending my message here.</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${subject_heading}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:20.330" level="INFO">Selecting options from selection list 'id_contact' by label Customer service.</msg>
+<status status="PASS" starttime="20210106 01:55:20.330" endtime="20210106 01:55:20.423"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:20.330" endtime="20210106 01:55:20.423"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_text}</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:20.424" level="INFO">Typing text 'customer@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 01:55:20.423" endtime="20210106 01:55:20.535"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${order_ref}</arg>
+<arg>${order_reference}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 01:55:20.535" level="INFO">Typing text '1B31H' into text field 'id:id_order'.</msg>
+<status status="PASS" starttime="20210106 01:55:20.535" endtime="20210106 01:55:20.625"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_text}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:20.625" level="INFO">Typing text 'i am sending my message here.' into text field 'id:message'.</msg>
+<status status="PASS" starttime="20210106 01:55:20.625" endtime="20210106 01:55:20.728"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit_contact_us}</arg>
+</arguments>
+<msg timestamp="20210106 01:55:20.728" level="INFO">Clicking element 'id:submitMessage'.</msg>
+<status status="PASS" starttime="20210106 01:55:20.728" endtime="20210106 01:55:21.784"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:55:20.329" endtime="20210106 01:55:21.785"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 01:55:21.811" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 01:55:21.785" endtime="20210106 01:55:21.811"></status>
+</kw>
+<doc>Testing out "Contact us" (normal operation)</doc>
+<tags>
+<tag>Component</tag>
+</tags>
+<status status="PASS" starttime="20210106 01:55:18.697" endtime="20210106 01:55:21.812" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210106 01:55:21.814" endtime="20210106 01:55:21.882"></status>
+</kw>
+<status status="PASS" starttime="20210106 01:54:18.814" endtime="20210106 01:55:21.882"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="0">Component</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" id="s1" name="Contact Us Page">Contact Us Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
