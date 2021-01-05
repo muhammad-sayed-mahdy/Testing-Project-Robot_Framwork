@@ -11,6 +11,7 @@ Resource    ../../resources/various_stuff/search.robot              #search
 Resource    ../../resources/various_stuff/bottom_navbar.robot       #navbar
 Resource    ../../resources/purchase/purchase.robot                 #to purchase
 Resource    ../../resources/my_account/personal_info.robot          #personal info
+Resource    ../../resources/home/addtocart.robot                    #add to cart
 
 
 Suite Setup      common.Open Site
@@ -66,17 +67,11 @@ Normal Sign Up
     Wait Until Page Contains Element    ${first_div_sortby}
     Element Should Contain    ${first_div_sortby}     Printed Dress
 
-    # Compare       .. Kareem
 
     # Add to Cart   .. Kareem
+    addtocart.Add to cart
     
-
-    #Add to Cart SUB
-    Go To  ${website}
-    Click Element   xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]
-    Wait Until Element Is Visible   xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/a  timeout= 10s
-    Page Should Contain     Product successfully added to your shopping cart
-    Click Element   xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/a
+    # Compare       .. Kareem
     
     # Purchase
     purchase.Purchase Cart
