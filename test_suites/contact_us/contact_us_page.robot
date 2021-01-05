@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 
 Resource    ../../resources/common/common.robot
-Resource    ../../resources/various_stuff/various_stuff.robot
+Resource    ../../resources/various_stuff/contact_us.robot
 
 Suite Setup      common.Open Site
 Suite Teardown   Close Browser
