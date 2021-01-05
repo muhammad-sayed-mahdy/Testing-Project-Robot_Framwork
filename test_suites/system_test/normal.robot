@@ -10,6 +10,7 @@ Resource    ../../resources/sign_up/sign_up.robot                   #sign up
 Resource    ../../resources/various_stuff/search.robot              #search
 Resource    ../../resources/various_stuff/bottom_navbar.robot       #navbar
 Resource    ../../resources/purchase/purchase.robot                 #to purchase
+Resource    ../../resources/my_account/personal_info.robot          #personal info
 
 
 Suite Setup      common.Open Site
@@ -25,12 +26,33 @@ Normal Sign Up
     # Sign up, log out then log in
     sign_up.Sign Up
     Page Should Not Contain     error
+
+    # Change personal info .. SAYED
+    #Change Lastname
+    Open personal information
+    ${new_lastname}=   Generate Random String    8     [LOWER]
+    Input Text  id=lastname  ${new_lastname}  clear=True
+    personal_info.Enter Current Password
+    personal_info.Save Info
+    Page Should Contain  Your personal information has been successfully updated.
+    Verify Changed Info  ${new_lastname}
+    #Change Email
+    ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
+    ${new_email}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
+    Input Text  id:email  ${new_email}  clear=True
+    personal_info.Enter Current Password  
+    personal_info.Save Info
+    Go To  ${personal_info_page}
+    Element Attribute Value Should Be  id:email  value  ${new_email}
+    Set Global Variable     ${email}  ${new_email} 
+
+
+    #Login and Logout
     log_out.Log out user
     Page Should Not Contain     error
     log_in.Log in user  ${email}  ${password}
     Page Should Not Contain     error
 
-    # Change personal info .. SAYED
 
     # Navigate
     Click Navbar With Check     ${navbar_woman}  OK 
@@ -45,7 +67,9 @@ Normal Sign Up
     Element Should Contain    ${first_div_sortby}     Printed Dress
 
     # Compare       .. Kareem
+
     # Add to Cart   .. Kareem
+    
 
     #Add to Cart SUB
     Go To  ${website}
@@ -62,6 +86,6 @@ Normal Sign Up
 
     # Log out
     log_out.Log out user
-    Sleep  3s
-    Page Should Not Contain     error
+    Sleep  1s
+    Page Should Not Contain     Sign out
     

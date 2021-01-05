@@ -48,7 +48,7 @@ Change info with incorrect password
 
 Change firstname
     # Info
-    [Documentation]  Change last name
+    [Documentation]  Change firstname
     [Tags]  Component
     # Procedure
     ${new_firstname}=   Generate Random String    8     [LOWER]
