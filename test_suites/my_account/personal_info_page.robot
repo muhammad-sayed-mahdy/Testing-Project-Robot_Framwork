@@ -76,15 +76,17 @@ Change Email address
     #Procedure
     ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
     ${new_email}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
+    Input Text  id:email  ${new_email}  clear=True
     personal_info.Enter Current Password  
     personal_info.Save Info
-    Verify Changed Info  ${new_email}
+    Go To  ${personal_info_page}
+    Element Attribute Value Should Be  id:email  value  ${new_email}
     Set Global Variable     ${email}  ${new_email} 
     
 
 Change Date Of Birth
     #Info
-    [Documentation]  Change email address
+    [Documentation]  Change date of birth
     [Tags]  Component
     #Procedure
 
