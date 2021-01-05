@@ -5,29 +5,10 @@ Library     BuiltIn
 
 Resource    ../global_variables.robot
 Resource    ../log_out/log_out.robot
+Resource    ../common/common.robot
 
 
 *** Keywords ***
-Generate Random info
-    ${EV}=   Generate Random String    8     [LOWER]
-    Set Global Variable     ${fname}    ${EV}
-    ${EV}=   Generate Random String    8     [LOWER]
-    Set Global Variable     ${lname}    ${EV}   
-    ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
-    ${EV}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
-    Set Global Variable     ${email}    ${Ev}      
-    ${EV}=   Generate Random String     10    [LETTERS][NUMBERS]
-    Set Global Variable     ${password}  ${Ev}  
-    ${EV}=   Generate Random String     12    [LETTERS][NUMBERS]
-    Set Global Variable     ${company}  ${Ev}    
-    ${EV}=   Generate Random String     22    [LETTERS][NUMBERS]
-    Set Global Variable     ${address}  ${Ev}    
-    ${EV}=   Generate Random String     8     [LETTERS][NUMBERS]
-    Set Global Variable     ${city}     ${Ev}         
-    ${EV}=   Generate Random String     5     [NUMBERS]
-    Set Global Variable     ${zip}      ${Ev}         
-    ${EV}=   Generate Random String     12    [NUMBERS]
-    Set Global Variable     ${phone}    ${Ev}       
 
 Assign Email
     Input Text      id:email_create     ${email}
@@ -75,7 +56,7 @@ Sign Up
     #go to the sign up /login page
     Go To  ${login_page}
     #fetch random info and update it globally
-    Run Keyword if     ${random} == 1      Generate Random info   
+    Run Keyword if     ${random} == 1      common.Generate Random info   
     #if this is the page, ie. user not already signed in
     ${status}   ${value}=    Run keyword and ignore error  Page should contain  Sign in
     Run Keyword Unless     '${status}' == 'PASS'      log_out.Log out user
