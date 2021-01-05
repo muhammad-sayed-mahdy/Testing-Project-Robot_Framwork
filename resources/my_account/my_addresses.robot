@@ -16,6 +16,10 @@ ${add_new_address_page}  http://automationpractice.com/index.php?controller=addr
 Open Addresses Page
     go to   ${my_addresses_page}
 
+Open Site Log in and Add Address
+    common.Open Site and log in
+    Add New Address
+    
 Fill In Required Fields
     Input Text  id:address1             ${address}    clear=True
     Input Text  id:city                 ${city}    clear=True
