@@ -30,4 +30,15 @@ Verify Changed Info
     [Arguments]  ${new_info}
     Go To  ${personal_info_page}
     Page Should Contain  ${new_info}
-   
+
+Order History Private Call
+    Click Element  xpath://*[@id="order-list"]/tbody/tr[1]/td[1]/a
+    Wait Until Element Is Visible   xpath://*[@id="submitReorder"]/a  timeout= 10s
+    Click Element  xpath://*[@id="submitReorder"]/a
+    purchase.Purchase Cart
+    
+Test Order History
+    Go To  ${history}
+    ${status}   ${value}=    Run keyword and ignore error  Page should not contain  You have not placed any orders.
+    Run Keyword Unless     '${status}' == 'PASS'      Order History Private Call
+    

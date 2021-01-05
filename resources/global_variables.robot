@@ -17,6 +17,7 @@ ${browser}      chrome
 ${login_page}   http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${logout_page}  http://automationpractice.com/index.php?mylogout=
 ${order}        http://automationpractice.com/index.php?controller=order
+${history}      http://automationpractice.com/index.php?controller=history
 
 # Various Stuff # 
                             # contact us
