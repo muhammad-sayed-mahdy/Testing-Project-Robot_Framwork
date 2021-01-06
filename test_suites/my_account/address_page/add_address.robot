@@ -28,7 +28,7 @@ Add New Address with existing alias
     # Procedure
     ${existing_alias}=  Get Text  xpath://*[@id="center_column"]/div[1]/div[1]/div[1]/ul/li[1]/h3
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:alias  ${existing_alias}  clear=True
     Click Element  id:submitAddress
@@ -40,7 +40,7 @@ Add New Address with no phone
     [Tags]  Component  Faulty
     # Procedure
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:phone  ${EMPTY}  clear=True
     Click Element  id:submitAddress
@@ -52,7 +52,7 @@ Add New Address with no address
     [Tags]  Component  Faulty
     # Procedure
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:address1  ${EMPTY}  clear=True
     Click Element  id:submitAddress
@@ -64,7 +64,7 @@ Add New Address with no city
     [Tags]  Component  Faulty
     # Procedure
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:city  ${EMPTY}  clear=True
     Click Element  id:submitAddress
@@ -76,7 +76,7 @@ Add New Address with no zip
     [Tags]  Component  Faulty
     # Procedure
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:postcode  ${EMPTY}  clear=True
     Click Element  id:submitAddress
@@ -88,7 +88,7 @@ Add New Address with Invalid zip
     [Tags]  Component  Faulty
     # Procedure
     Click Element  xpath://*[@id="center_column"]/div[2]/a
-    common.Generate Random info
+    common.Generate Random info sub
     my_addresses.Fill In Required Fields
     Input Text  id:postcode  garbage  clear=True
     Click Element  id:submitAddress

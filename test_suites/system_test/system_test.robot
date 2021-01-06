@@ -12,7 +12,7 @@ Resource    ../../resources/various_stuff/bottom_navbar.robot       #navbar
 Resource    ../../resources/purchase/purchase.robot                 #to purchase
 Resource    ../../resources/my_account/personal_info.robot          #personal info
 Resource    ../../resources/home/addtocart.robot                    #add to cart
-
+Resource    ../../resources/my_account/my_addresses.robot           #address
 
 Suite Setup      common.Open Site
 Suite Teardown   Close Browser
@@ -36,7 +36,7 @@ System Test
     personal_info.Enter Current Password
     personal_info.Save Info
     Page Should Contain  Your personal information has been successfully updated.
-    Verify Changed Info  ${new_lastname}
+    personal_info.Verify Changed Info  ${new_lastname}
 
     #Change Email
     ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
@@ -47,14 +47,35 @@ System Test
     Go To  ${personal_info_page}
     Element Attribute Value Should Be  id:email  value  ${new_email}
     Set Global Variable     ${email}  ${new_email} 
-
-                                                    #Addresses...Sayed
+    
+    #1
+    my_addresses.Open Addresses Page
+    my_addresses.Add New Address
+    my_addresses.Verify Changed Info  
+    #2
+    my_addresses.Open Addresses Page
+    ${existing_alias}=  Get Text  xpath://*[@id="center_column"]/div[1]/div[1]/div[1]/ul/li[1]/h3
+    Click Element  xpath://*[@id="center_column"]/div[2]/a
+    common.Generate Random info sub
+    my_addresses.Fill In Required Fields
+    Input Text  id:alias  ${existing_alias}  clear=True
+    Click Element  id:submitAddress
+    Page Should Contain  The alias "${existing_alias}" has already been used. Please select another one.
+    #3
+    my_addresses.Open Addresses Page
+    Click Element  xpath://*[@id="center_column"]/div[2]/a
+    common.Generate Random info sub
+    my_addresses.Fill In Required Fields
+    Input Text  id:phone  ${EMPTY}  clear=True
+    Click Element  id:submitAddress
+    Page Should Contain  error
 
     #Login and Logout
     log_out.Log out user
-    Page Should Not Contain     error
+    Sleep  1s
+    Page Should Not Contain     Sign out
     log_in.Log in user  ${email}  ${password}
-    Page Should Not Contain     error
+    Page Should Not Contain     Sign in
 
 
     # Navigate

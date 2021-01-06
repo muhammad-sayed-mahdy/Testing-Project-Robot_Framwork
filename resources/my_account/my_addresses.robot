@@ -30,12 +30,11 @@ Fill In Required Fields
 
 Add New Address
     Go To  ${add_new_address_page}
-    common.Generate Random info
+    common.Generate Random info sub
     Fill In Required Fields
     Click Element  id:submitAddress
 
 Verify Changed Info
-    
     Page Should Contain  ${address}
     Page Should Contain  ${city}
     Page Should Contain  ${zip}

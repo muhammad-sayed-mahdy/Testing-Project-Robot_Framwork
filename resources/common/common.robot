@@ -39,3 +39,13 @@ Generate Random info
     Set Global Variable     ${zip}      ${Ev}         
     ${EV}=   Generate Random String     12    [NUMBERS]
     Set Global Variable     ${phone}    ${Ev}       
+
+Generate Random info SUB
+    ${EV}=   Generate Random String     22    [LETTERS][NUMBERS]
+    Set Global Variable     ${address}  ${Ev}    
+    ${EV}=   Generate Random String     8     [LETTERS][NUMBERS]
+    Set Global Variable     ${city}     ${Ev}         
+    ${EV}=   Generate Random String     5     [NUMBERS]
+    Set Global Variable     ${zip}      ${Ev}         
+    ${EV}=   Generate Random String     12    [NUMBERS]
+    Set Global Variable     ${phone}    ${Ev}       
