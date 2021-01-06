@@ -136,4 +136,89 @@ Search and Sort test Cases 4
     Wait Until Page Contains Element    ${first_div_sortby}
     Element Should Contain    ${first_div_sortby}     Printed Dress
 
-# Filter Sort and Compare test Caese
+Filter Sort and Compare test Case 1
+    [Tags]  Filter Data-Driven
+    log_in.Log in user  ${email_1}  ${pass_1}
+    Go To   ${website}
+    Click Element  xpath://*[@id="block_top_menu"]/ul/li[1]/a
+    Click Element  xpath://*[@id="selectProductSort"]
+    Click Element  xpath://*[@id="selectProductSort"]/option[1]
+    Sleep  10s
+    Page Should Not Contain  Loading...
+
+Filter Sort and Compare test Case 2
+    [Tags]  Filter Data-Driven
+    Go To   ${website}
+    Click Element  xpath://*[@id="block_top_menu"]/ul/li[1]/a
+    Click Element  xpath://*[@id="layered_category_4"]
+    Sleep  10s
+    Page Should Not Contain  Loading...
+
+Filter Sort and Compare test Case 3
+    [Tags]  Filter Data-Driven
+    Go To   ${website}
+    Click Element  xpath://*[@id="block_top_menu"]/ul/li[1]/a
+    Click Element  xpath://*[@id="layered_id_attribute_group_1"]
+    Sleep  10s
+    Page Should Not Contain  Loading...
+
+Filter Sort and Compare test Case 4
+    [Tags]  Filter Data-Driven
+    Go To   ${website}
+    Click Element  xpath://*[@id="block_top_menu"]/ul/li[1]/a
+    Click Element  xpath://*[@id="layered_id_feature_5"]
+    Sleep  10s
+    Page Should Not Contain  Loading...
+
+
+Personal Info test case 1
+    [Documentation]  Change info without entring password
+    [Tags]  Personal Info Data-Driven
+    # Procedure
+    personal_info.Open personal information
+    personal_info.Change lastname
+    personal_info.Save Info
+    Page Should Contain  error
+
+Personal Info test case 2
+    [Documentation]  Change info with incorrect password
+    [Tags]  Personal Info Data-Driven
+    # Procedure
+    personal_info.Open personal information
+
+Personal Info test case 3
+    [Documentation]  Change firstname
+    [Tags]  Personal Info Data-Driven
+    # Procedure
+    personal_info.Open personal information
+    ${new_firstname}=   Generate Random String    8     [LOWER]
+    Input Text  id=lastname  ${new_firstname}  clear=True
+    personal_info.Enter Current Password
+    personal_info.Save Info
+    Page Should Contain  Your personal information has been successfully updated.
+    Verify Changed Info  ${new_firstname}
+
+Personal Info test case 4
+    [Documentation]  Change Social Title
+    [Tags]  Personal Info Data-Driven
+    # Procedure
+    personal_info.Open personal information
+    Select Radio Button  id_gender  1
+    personal_info.Enter Current Password  
+    personal_info.Save Info
+    Go To  ${personal_info_page}
+    Radio Button Should Be Set To  id_gender  1
+
+Personal Info test case 5
+    [Documentation]  Change Email address
+    [Tags]  Personal Info Data-Driven
+    # Procedure
+    personal_info.Open personal information
+    ${var}=   Generate Random String     10    [LETTERS][NUMBERS]
+    ${new_email}=   Catenate    SEPARATOR=  ${var}  ${sign_up_prefix}
+    Input Text  id:email  ${new_email}  clear=True
+    personal_info.Enter Current Password  
+    personal_info.Save Info
+    Go To  ${personal_info_page}
+    Element Attribute Value Should Be  id:email  value  ${new_email}
+    Set Global Variable     ${email}  ${new_email} 
