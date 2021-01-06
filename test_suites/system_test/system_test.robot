@@ -48,7 +48,7 @@ System Test
     Element Attribute Value Should Be  id:email  value  ${new_email}
     Set Global Variable     ${email}  ${new_email} 
     
-    #1
+    #Add addresses
     my_addresses.Open Addresses Page
     my_addresses.Add New Address
     my_addresses.Verify Changed Info  
@@ -94,9 +94,6 @@ System Test
     # Add to Cart   .. Kareem
     addtocart.Add to cart
     Click Element   xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a
-
-
-                                            # Compare       .. Kareem
 
     # Purchase
     purchase.Purchase Cart

@@ -1,0 +1,2872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.12 on linux)" generated="20210106 02:38:21.579" rpa="false">
+<suite id="s1" name="System Test" source="/home/evram/Desktop/projects/testing_project/test_suites/system_test/system_test.robot">
+<kw name="Open Site" library="common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210106 02:38:21.830" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210106 02:38:21.830" endtime="20210106 02:39:13.476"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:38:21.830" endtime="20210106 02:39:13.476"></status>
+</kw>
+<test id="s1-t1" name="System Test">
+<kw name="Sign Up" library="sign_up">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${login_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:13.481" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20210106 02:39:13.480" endtime="20210106 02:39:14.881"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${random} == 1</arg>
+<arg>common.Generate Random info</arg>
+</arguments>
+<kw name="Generate Random info" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.885" level="INFO">${EV} = zhbnvnqy</msg>
+<status status="PASS" starttime="20210106 02:39:14.883" endtime="20210106 02:39:14.885"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${fname}</arg>
+<arg>${EV}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.888" level="INFO">${fname} = zhbnvnqy</msg>
+<status status="PASS" starttime="20210106 02:39:14.886" endtime="20210106 02:39:14.888"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.889" level="INFO">${EV} = lgwsyech</msg>
+<status status="PASS" starttime="20210106 02:39:14.888" endtime="20210106 02:39:14.889"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${lname}</arg>
+<arg>${EV}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.890" level="INFO">${lname} = lgwsyech</msg>
+<status status="PASS" starttime="20210106 02:39:14.889" endtime="20210106 02:39:14.890"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${var}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.891" level="INFO">${var} = r8HRD01GHu</msg>
+<status status="PASS" starttime="20210106 02:39:14.890" endtime="20210106 02:39:14.891"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${var}</arg>
+<arg>${sign_up_prefix}</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.892" level="INFO">${EV} = r8HRD01GHu@ev.com</msg>
+<status status="PASS" starttime="20210106 02:39:14.891" endtime="20210106 02:39:14.892"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.895" level="INFO">${email} = r8HRD01GHu@ev.com</msg>
+<status status="PASS" starttime="20210106 02:39:14.893" endtime="20210106 02:39:14.895"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.896" level="INFO">${EV} = 33qqwvhfe0</msg>
+<status status="PASS" starttime="20210106 02:39:14.896" endtime="20210106 02:39:14.896"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.897" level="INFO">${password} = 33qqwvhfe0</msg>
+<status status="PASS" starttime="20210106 02:39:14.896" endtime="20210106 02:39:14.897"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.898" level="INFO">${EV} = XgyXtv53TeND</msg>
+<status status="PASS" starttime="20210106 02:39:14.897" endtime="20210106 02:39:14.898"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${company}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.899" level="INFO">${company} = XgyXtv53TeND</msg>
+<status status="PASS" starttime="20210106 02:39:14.898" endtime="20210106 02:39:14.899"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>22</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.900" level="INFO">${EV} = orFYvjNiKekeofovtNaf1W</msg>
+<status status="PASS" starttime="20210106 02:39:14.899" endtime="20210106 02:39:14.900"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${address}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.901" level="INFO">${address} = orFYvjNiKekeofovtNaf1W</msg>
+<status status="PASS" starttime="20210106 02:39:14.900" endtime="20210106 02:39:14.901"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.903" level="INFO">${EV} = Mdr7FYvz</msg>
+<status status="PASS" starttime="20210106 02:39:14.901" endtime="20210106 02:39:14.903"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${city}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.904" level="INFO">${city} = Mdr7FYvz</msg>
+<status status="PASS" starttime="20210106 02:39:14.904" endtime="20210106 02:39:14.905"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.905" level="INFO">${EV} = 86116</msg>
+<status status="PASS" starttime="20210106 02:39:14.905" endtime="20210106 02:39:14.905"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${zip}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.906" level="INFO">${zip} = 86116</msg>
+<status status="PASS" starttime="20210106 02:39:14.905" endtime="20210106 02:39:14.907"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:14.908" level="INFO">${EV} = 232672352666</msg>
+<status status="PASS" starttime="20210106 02:39:14.908" endtime="20210106 02:39:14.909"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.910" level="INFO">${phone} = 232672352666</msg>
+<status status="PASS" starttime="20210106 02:39:14.909" endtime="20210106 02:39:14.910"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:14.882" endtime="20210106 02:39:14.910"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:14.882" endtime="20210106 02:39:14.910"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.931" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210106 02:39:14.911" endtime="20210106 02:39:14.931"></status>
+</kw>
+<msg timestamp="20210106 02:39:14.931" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:39:14.931" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:39:14.911" endtime="20210106 02:39:14.931"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>log_out.Log out user</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:39:14.932" endtime="20210106 02:39:14.932"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.946" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210106 02:39:14.933" endtime="20210106 02:39:14.947"></status>
+</kw>
+<msg timestamp="20210106 02:39:14.947" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:39:14.947" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:39:14.932" endtime="20210106 02:39:14.947"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Assign Email</arg>
+</arguments>
+<kw name="Assign Email" library="sign_up">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email_create</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:14.948" level="INFO">Typing text 'r8HRD01GHu@ev.com' into text field 'id:email_create'.</msg>
+<status status="PASS" starttime="20210106 02:39:14.948" endtime="20210106 02:39:15.080"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id:SubmitCreate</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:39:15.083" level="INFO">Sending key(s) ('RETURN',) to id:SubmitCreate element.</msg>
+<msg timestamp="20210106 02:39:15.460" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:39:15.460" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:39:15.081" endtime="20210106 02:39:15.477"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.478" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210106 02:39:15.477" endtime="20210106 02:39:20.479"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:14.948" endtime="20210106 02:39:20.480"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:14.947" endtime="20210106 02:39:20.480"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page Should not Contain</arg>
+<arg>id:SubmitCreate</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>id:SubmitCreate</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.547" level="INFO">Current page does not contain text 'id:SubmitCreate'.</msg>
+<status status="PASS" starttime="20210106 02:39:20.482" endtime="20210106 02:39:20.547"></status>
+</kw>
+<msg timestamp="20210106 02:39:20.547" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:39:20.547" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:39:20.481" endtime="20210106 02:39:20.547"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Sign up steps</arg>
+</arguments>
+<kw name="Sign up steps" library="sign_up">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 11),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:20.550" level="INFO">${rand_int} = [3]</msg>
+<status status="PASS" starttime="20210106 02:39:20.549" endtime="20210106 02:39:20.550"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>(${rand_int}[0] % 2)+1</arg>
+</arguments>
+<assign>
+<var>${mod}</var>
+</assign>
+<msg timestamp="20210106 02:39:20.550" level="INFO">${mod} = 2</msg>
+<status status="PASS" starttime="20210106 02:39:20.550" endtime="20210106 02:39:20.550"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>id_gender</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.551" level="INFO">Selecting '2' from radio button 'id_gender'.</msg>
+<status status="PASS" starttime="20210106 02:39:20.551" endtime="20210106 02:39:20.636"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:customer_firstname</arg>
+<arg>${fname}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.637" level="INFO">Typing text 'zhbnvnqy' into text field 'id:customer_firstname'.</msg>
+<status status="PASS" starttime="20210106 02:39:20.636" endtime="20210106 02:39:20.745"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:customer_lastname</arg>
+<arg>${lname}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.746" level="INFO">Typing text 'lgwsyech' into text field 'id:customer_lastname'.</msg>
+<status status="PASS" starttime="20210106 02:39:20.746" endtime="20210106 02:39:20.894"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:20.894" level="INFO">Typing text 'r8HRD01GHu@ev.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 02:39:20.894" endtime="20210106 02:39:21.079"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passwd</arg>
+<arg>${password}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.080" level="INFO">Typing text '33qqwvhfe0' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.079" endtime="20210106 02:39:21.226"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:firstname</arg>
+<arg>${fname}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.227" level="INFO">Typing text 'zhbnvnqy' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.226" endtime="20210106 02:39:21.412"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:lastname</arg>
+<arg>${lname}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.413" level="INFO">Typing text 'lgwsyech' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.412" endtime="20210106 02:39:21.594"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:company</arg>
+<arg>${company}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.595" level="INFO">Typing text 'XgyXtv53TeND' into text field 'id:company'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.594" endtime="20210106 02:39:21.758"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:address1</arg>
+<arg>${address}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.759" level="INFO">Typing text 'orFYvjNiKekeofovtNaf1W' into text field 'id:address1'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.758" endtime="20210106 02:39:21.942"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:city</arg>
+<arg>${city}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:21.943" level="INFO">Typing text 'Mdr7FYvz' into text field 'id:city'.</msg>
+<status status="PASS" starttime="20210106 02:39:21.942" endtime="20210106 02:39:22.095"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:postcode</arg>
+<arg>${zip}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.096" level="INFO">Typing text '86116' into text field 'id:postcode'.</msg>
+<status status="PASS" starttime="20210106 02:39:22.095" endtime="20210106 02:39:22.264"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.266" level="INFO">Typing text '232672352666' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210106 02:39:22.265" endtime="20210106 02:39:22.434"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone_mobile</arg>
+<arg>${phone}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.434" level="INFO">Typing text '232672352666' into text field 'id:phone_mobile'.</msg>
+<status status="PASS" starttime="20210106 02:39:22.434" endtime="20210106 02:39:22.583"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 32),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.585" level="INFO">${rand_int} = [30]</msg>
+<status status="PASS" starttime="20210106 02:39:22.584" endtime="20210106 02:39:22.585"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.586" level="INFO">${rand_str} = 30</msg>
+<status status="PASS" starttime="20210106 02:39:22.585" endtime="20210106 02:39:22.586"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=days</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.587" level="INFO">Selecting options from selection list 'name=days' by value 30.</msg>
+<status status="PASS" starttime="20210106 02:39:22.587" endtime="20210106 02:39:22.707"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 13),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.708" level="INFO">${rand_int} = [7]</msg>
+<status status="PASS" starttime="20210106 02:39:22.708" endtime="20210106 02:39:22.709"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.711" level="INFO">${rand_str} = 7</msg>
+<status status="PASS" starttime="20210106 02:39:22.709" endtime="20210106 02:39:22.711"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=months</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.711" level="INFO">Selecting options from selection list 'name=months' by value 7.</msg>
+<status status="PASS" starttime="20210106 02:39:22.711" endtime="20210106 02:39:22.806"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1900, 2022),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.806" level="INFO">${rand_int} = [1907]</msg>
+<status status="PASS" starttime="20210106 02:39:22.806" endtime="20210106 02:39:22.806"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.808" level="INFO">${rand_str} = 1907</msg>
+<status status="PASS" starttime="20210106 02:39:22.807" endtime="20210106 02:39:22.808"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=years</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.808" level="INFO">Selecting options from selection list 'name=years' by value 1907.</msg>
+<status status="PASS" starttime="20210106 02:39:22.808" endtime="20210106 02:39:22.885"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 50),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.886" level="INFO">${rand_int} = [5]</msg>
+<status status="PASS" starttime="20210106 02:39:22.886" endtime="20210106 02:39:22.886"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:39:22.888" level="INFO">${rand_str} = 5</msg>
+<status status="PASS" starttime="20210106 02:39:22.887" endtime="20210106 02:39:22.888"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=id_state</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.888" level="INFO">Selecting options from selection list 'name=id_state' by value 5.</msg>
+<status status="PASS" starttime="20210106 02:39:22.888" endtime="20210106 02:39:22.961"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:20.548" endtime="20210106 02:39:22.961"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:20.548" endtime="20210106 02:39:22.961"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id:submitAccount</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:39:22.962" level="INFO">Sending key(s) ('RETURN',) to id:submitAccount element.</msg>
+<msg timestamp="20210106 02:39:25.710" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:39:25.710" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:39:22.961" endtime="20210106 02:39:25.725"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${ignore_error} == 1</arg>
+<arg>Page should contain</arg>
+<arg>Sign out</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:39:25.754" level="INFO">Current page contains text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:39:25.727" endtime="20210106 02:39:25.754"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:25.725" endtime="20210106 02:39:25.754"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:13.480" endtime="20210106 02:39:25.755"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:39:25.789" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:39:25.755" endtime="20210106 02:39:25.789"></status>
+</kw>
+<kw name="Open personal information" library="personal_info">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${account_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:25.790" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=my-account'</msg>
+<status status="PASS" starttime="20210106 02:39:25.790" endtime="20210106 02:39:27.714"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div/div[1]/ul/li[4]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:39:27.716" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div/div[1]/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20210106 02:39:27.715" endtime="20210106 02:39:30.587"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:25.789" endtime="20210106 02:39:30.587"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${new_lastname}</var>
+</assign>
+<msg timestamp="20210106 02:39:30.588" level="INFO">${new_lastname} = bmxtaukg</msg>
+<status status="PASS" starttime="20210106 02:39:30.587" endtime="20210106 02:39:30.588"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=lastname</arg>
+<arg>${new_lastname}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:30.590" level="INFO">Typing text 'bmxtaukg' into text field 'id=lastname'.</msg>
+<status status="PASS" starttime="20210106 02:39:30.589" endtime="20210106 02:39:30.735"></status>
+</kw>
+<kw name="Enter Current Password" library="personal_info">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:old_passwd</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:30.736" level="INFO">Typing text ' 33qqwvhfe0' into text field 'id:old_passwd'.</msg>
+<status status="PASS" starttime="20210106 02:39:30.736" endtime="20210106 02:39:30.887"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:30.735" endtime="20210106 02:39:30.887"></status>
+</kw>
+<kw name="Save Info" library="personal_info">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:submitIdentity</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:39:30.889" level="INFO">Sending key(s) ('RETURN',) to name:submitIdentity element.</msg>
+<msg timestamp="20210106 02:39:35.566" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:39:35.566" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:39:30.888" endtime="20210106 02:39:35.577"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:30.888" endtime="20210106 02:39:35.577"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Your personal information has been successfully updated.</arg>
+</arguments>
+<msg timestamp="20210106 02:39:35.617" level="INFO">Current page contains text 'Your personal information has been successfully updated.'.</msg>
+<status status="PASS" starttime="20210106 02:39:35.578" endtime="20210106 02:39:35.617"></status>
+</kw>
+<kw name="Verify Changed Info" library="personal_info">
+<arguments>
+<arg>${new_lastname}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${personal_info_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:35.621" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=identity'</msg>
+<status status="PASS" starttime="20210106 02:39:35.620" endtime="20210106 02:39:37.862"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${new_info}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:37.898" level="INFO">Current page contains text 'bmxtaukg'.</msg>
+<status status="PASS" starttime="20210106 02:39:37.862" endtime="20210106 02:39:37.898"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:35.618" endtime="20210106 02:39:37.898"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${var}</var>
+</assign>
+<msg timestamp="20210106 02:39:37.900" level="INFO">${var} = oYnu4Bf5IE</msg>
+<status status="PASS" starttime="20210106 02:39:37.899" endtime="20210106 02:39:37.900"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${var}</arg>
+<arg>${sign_up_prefix}</arg>
+</arguments>
+<assign>
+<var>${new_email}</var>
+</assign>
+<msg timestamp="20210106 02:39:37.902" level="INFO">${new_email} = oYnu4Bf5IE@ev.com</msg>
+<status status="PASS" starttime="20210106 02:39:37.901" endtime="20210106 02:39:37.902"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${new_email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:37.904" level="INFO">Typing text 'oYnu4Bf5IE@ev.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 02:39:37.902" endtime="20210106 02:39:38.112"></status>
+</kw>
+<kw name="Enter Current Password" library="personal_info">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:old_passwd</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:38.114" level="INFO">Typing text ' 33qqwvhfe0' into text field 'id:old_passwd'.</msg>
+<status status="PASS" starttime="20210106 02:39:38.114" endtime="20210106 02:39:38.323"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:38.113" endtime="20210106 02:39:38.324"></status>
+</kw>
+<kw name="Save Info" library="personal_info">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:submitIdentity</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:39:38.329" level="INFO">Sending key(s) ('RETURN',) to name:submitIdentity element.</msg>
+<msg timestamp="20210106 02:39:39.850" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:39:39.850" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:39:38.327" endtime="20210106 02:39:39.882"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:38.325" endtime="20210106 02:39:39.883"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${personal_info_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:39.885" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=identity'</msg>
+<status status="PASS" starttime="20210106 02:39:39.883" endtime="20210106 02:39:42.238"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>value</arg>
+<arg>${new_email}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:42.270" level="INFO">Element 'id:email' attribute 'value' contains value 'oYnu4Bf5IE@ev.com'.</msg>
+<status status="PASS" starttime="20210106 02:39:42.238" endtime="20210106 02:39:42.270"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${email}</arg>
+<arg>${new_email}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:42.273" level="INFO">${email} = oYnu4Bf5IE@ev.com</msg>
+<status status="PASS" starttime="20210106 02:39:42.272" endtime="20210106 02:39:42.273"></status>
+</kw>
+<kw name="Open Addresses Page" library="my_addresses">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${my_addresses_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:42.275" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=addresses'</msg>
+<status status="PASS" starttime="20210106 02:39:42.275" endtime="20210106 02:39:47.303"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:42.274" endtime="20210106 02:39:47.303"></status>
+</kw>
+<kw name="Add New Address" library="my_addresses">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${add_new_address_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:47.306" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=address'</msg>
+<status status="PASS" starttime="20210106 02:39:47.305" endtime="20210106 02:39:53.965"></status>
+</kw>
+<kw name="Generate Random info SUB" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>22</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:53.966" level="INFO">${EV} = NQbhZE3QnzBO6lbqEhEPik</msg>
+<status status="PASS" starttime="20210106 02:39:53.966" endtime="20210106 02:39:53.966"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${address}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:53.967" level="INFO">${address} = NQbhZE3QnzBO6lbqEhEPik</msg>
+<status status="PASS" starttime="20210106 02:39:53.967" endtime="20210106 02:39:53.967"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:53.968" level="INFO">${EV} = ZJ8NswHQ</msg>
+<status status="PASS" starttime="20210106 02:39:53.967" endtime="20210106 02:39:53.968"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${city}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:53.969" level="INFO">${city} = ZJ8NswHQ</msg>
+<status status="PASS" starttime="20210106 02:39:53.968" endtime="20210106 02:39:53.970"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:53.971" level="INFO">${EV} = 81269</msg>
+<status status="PASS" starttime="20210106 02:39:53.971" endtime="20210106 02:39:53.971"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${zip}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:53.972" level="INFO">${zip} = 81269</msg>
+<status status="PASS" starttime="20210106 02:39:53.971" endtime="20210106 02:39:53.972"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:39:53.973" level="INFO">${EV} = 646764593652</msg>
+<status status="PASS" starttime="20210106 02:39:53.972" endtime="20210106 02:39:53.973"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:53.974" level="INFO">${phone} = 646764593652</msg>
+<status status="PASS" starttime="20210106 02:39:53.973" endtime="20210106 02:39:53.974"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:53.965" endtime="20210106 02:39:53.974"></status>
+</kw>
+<kw name="Fill In Required Fields" library="my_addresses">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:address1</arg>
+<arg>${address}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:53.976" level="INFO">Typing text 'NQbhZE3QnzBO6lbqEhEPik' into text field 'id:address1'.</msg>
+<status status="PASS" starttime="20210106 02:39:53.975" endtime="20210106 02:39:54.119"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:city</arg>
+<arg>${city}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.121" level="INFO">Typing text 'ZJ8NswHQ' into text field 'id:city'.</msg>
+<status status="PASS" starttime="20210106 02:39:54.120" endtime="20210106 02:39:54.271"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:postcode</arg>
+<arg>${zip}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.273" level="INFO">Typing text '81269' into text field 'id:postcode'.</msg>
+<status status="PASS" starttime="20210106 02:39:54.272" endtime="20210106 02:39:54.413"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.414" level="INFO">Typing text '646764593652' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210106 02:39:54.413" endtime="20210106 02:39:54.577"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${alias}</var>
+</assign>
+<msg timestamp="20210106 02:39:54.578" level="INFO">${alias} = kyhgqnrq</msg>
+<status status="PASS" starttime="20210106 02:39:54.577" endtime="20210106 02:39:54.578"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:alias</arg>
+<arg>${alias}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.579" level="INFO">Typing text 'kyhgqnrq' into text field 'id:alias'.</msg>
+<status status="PASS" starttime="20210106 02:39:54.578" endtime="20210106 02:39:54.736"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 50),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:39:54.738" level="INFO">${rand_int} = [28]</msg>
+<status status="PASS" starttime="20210106 02:39:54.737" endtime="20210106 02:39:54.738"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:39:54.739" level="INFO">${rand_str} = 28</msg>
+<status status="PASS" starttime="20210106 02:39:54.738" endtime="20210106 02:39:54.739"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=id_state</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.742" level="INFO">Selecting options from selection list 'name=id_state' by value 28.</msg>
+<status status="PASS" starttime="20210106 02:39:54.740" endtime="20210106 02:39:54.873"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:53.974" endtime="20210106 02:39:54.873"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:submitAddress</arg>
+</arguments>
+<msg timestamp="20210106 02:39:54.874" level="INFO">Clicking element 'id:submitAddress'.</msg>
+<status status="PASS" starttime="20210106 02:39:54.874" endtime="20210106 02:40:01.156"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:39:47.304" endtime="20210106 02:40:01.156"></status>
+</kw>
+<kw name="Verify Changed Info" library="my_addresses">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:01.186" level="INFO">Current page contains text 'NQbhZE3QnzBO6lbqEhEPik'.</msg>
+<status status="PASS" starttime="20210106 02:40:01.157" endtime="20210106 02:40:01.186"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:01.208" level="INFO">Current page contains text 'ZJ8NswHQ'.</msg>
+<status status="PASS" starttime="20210106 02:40:01.187" endtime="20210106 02:40:01.208"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${zip}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:01.228" level="INFO">Current page contains text '81269'.</msg>
+<status status="PASS" starttime="20210106 02:40:01.208" endtime="20210106 02:40:01.228"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:01.246" level="INFO">Current page contains text '646764593652'.</msg>
+<status status="PASS" starttime="20210106 02:40:01.228" endtime="20210106 02:40:01.247"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:01.156" endtime="20210106 02:40:01.247"></status>
+</kw>
+<kw name="Open Addresses Page" library="my_addresses">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${my_addresses_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:01.248" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=addresses'</msg>
+<status status="PASS" starttime="20210106 02:40:01.248" endtime="20210106 02:40:02.619"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:01.247" endtime="20210106 02:40:02.620"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[1]/div[1]/div[1]/ul/li[1]/h3</arg>
+</arguments>
+<assign>
+<var>${existing_alias}</var>
+</assign>
+<msg timestamp="20210106 02:40:02.663" level="INFO">${existing_alias} = MY ADDRESS</msg>
+<status status="PASS" starttime="20210106 02:40:02.620" endtime="20210106 02:40:02.663"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:40:02.664" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:40:02.664" endtime="20210106 02:40:04.465"></status>
+</kw>
+<kw name="Generate Random info SUB" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>22</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:04.468" level="INFO">${EV} = J2kqNxzMycWuHFzqJm2rpd</msg>
+<status status="PASS" starttime="20210106 02:40:04.466" endtime="20210106 02:40:04.468"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${address}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.469" level="INFO">${address} = J2kqNxzMycWuHFzqJm2rpd</msg>
+<status status="PASS" starttime="20210106 02:40:04.468" endtime="20210106 02:40:04.469"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:04.471" level="INFO">${EV} = qmSdsAzg</msg>
+<status status="PASS" starttime="20210106 02:40:04.470" endtime="20210106 02:40:04.471"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${city}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.472" level="INFO">${city} = qmSdsAzg</msg>
+<status status="PASS" starttime="20210106 02:40:04.471" endtime="20210106 02:40:04.472"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:04.473" level="INFO">${EV} = 78021</msg>
+<status status="PASS" starttime="20210106 02:40:04.472" endtime="20210106 02:40:04.473"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${zip}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.474" level="INFO">${zip} = 78021</msg>
+<status status="PASS" starttime="20210106 02:40:04.473" endtime="20210106 02:40:04.474"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:04.474" level="INFO">${EV} = 041519266261</msg>
+<status status="PASS" starttime="20210106 02:40:04.474" endtime="20210106 02:40:04.474"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.475" level="INFO">${phone} = 041519266261</msg>
+<status status="PASS" starttime="20210106 02:40:04.474" endtime="20210106 02:40:04.475"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:04.465" endtime="20210106 02:40:04.475"></status>
+</kw>
+<kw name="Fill In Required Fields" library="my_addresses">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:address1</arg>
+<arg>${address}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.476" level="INFO">Typing text 'J2kqNxzMycWuHFzqJm2rpd' into text field 'id:address1'.</msg>
+<status status="PASS" starttime="20210106 02:40:04.476" endtime="20210106 02:40:04.643"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:city</arg>
+<arg>${city}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.645" level="INFO">Typing text 'qmSdsAzg' into text field 'id:city'.</msg>
+<status status="PASS" starttime="20210106 02:40:04.644" endtime="20210106 02:40:04.791"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:postcode</arg>
+<arg>${zip}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.792" level="INFO">Typing text '78021' into text field 'id:postcode'.</msg>
+<status status="PASS" starttime="20210106 02:40:04.791" endtime="20210106 02:40:04.960"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:04.961" level="INFO">Typing text '041519266261' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210106 02:40:04.960" endtime="20210106 02:40:05.133"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${alias}</var>
+</assign>
+<msg timestamp="20210106 02:40:05.134" level="INFO">${alias} = cmasyhmf</msg>
+<status status="PASS" starttime="20210106 02:40:05.133" endtime="20210106 02:40:05.134"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:alias</arg>
+<arg>${alias}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:05.135" level="INFO">Typing text 'cmasyhmf' into text field 'id:alias'.</msg>
+<status status="PASS" starttime="20210106 02:40:05.135" endtime="20210106 02:40:05.284"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 50),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:40:05.285" level="INFO">${rand_int} = [30]</msg>
+<status status="PASS" starttime="20210106 02:40:05.285" endtime="20210106 02:40:05.285"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:40:05.286" level="INFO">${rand_str} = 30</msg>
+<status status="PASS" starttime="20210106 02:40:05.286" endtime="20210106 02:40:05.286"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=id_state</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:05.287" level="INFO">Selecting options from selection list 'name=id_state' by value 30.</msg>
+<status status="PASS" starttime="20210106 02:40:05.287" endtime="20210106 02:40:05.400"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:04.475" endtime="20210106 02:40:05.400"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:alias</arg>
+<arg>${existing_alias}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:05.401" level="INFO">Typing text 'MY ADDRESS' into text field 'id:alias'.</msg>
+<status status="PASS" starttime="20210106 02:40:05.401" endtime="20210106 02:40:05.523"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:submitAddress</arg>
+</arguments>
+<msg timestamp="20210106 02:40:05.524" level="INFO">Clicking element 'id:submitAddress'.</msg>
+<status status="PASS" starttime="20210106 02:40:05.524" endtime="20210106 02:40:06.838"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>The alias "${existing_alias}" has already been used. Please select another one.</arg>
+</arguments>
+<msg timestamp="20210106 02:40:06.869" level="INFO">Current page contains text 'The alias "MY ADDRESS" has already been used. Please select another one.'.</msg>
+<status status="PASS" starttime="20210106 02:40:06.838" endtime="20210106 02:40:06.869"></status>
+</kw>
+<kw name="Open Addresses Page" library="my_addresses">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${my_addresses_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:06.870" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=addresses'</msg>
+<status status="PASS" starttime="20210106 02:40:06.870" endtime="20210106 02:40:08.411"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:06.870" endtime="20210106 02:40:08.412"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:40:08.414" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:40:08.413" endtime="20210106 02:40:10.706"></status>
+</kw>
+<kw name="Generate Random info SUB" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>22</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:10.707" level="INFO">${EV} = 2huU81k2N3LWKOGaQwQBS5</msg>
+<status status="PASS" starttime="20210106 02:40:10.707" endtime="20210106 02:40:10.707"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${address}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.708" level="INFO">${address} = 2huU81k2N3LWKOGaQwQBS5</msg>
+<status status="PASS" starttime="20210106 02:40:10.707" endtime="20210106 02:40:10.708"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:10.708" level="INFO">${EV} = PNUNGdiS</msg>
+<status status="PASS" starttime="20210106 02:40:10.708" endtime="20210106 02:40:10.709"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${city}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.710" level="INFO">${city} = PNUNGdiS</msg>
+<status status="PASS" starttime="20210106 02:40:10.709" endtime="20210106 02:40:10.710"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:10.711" level="INFO">${EV} = 53003</msg>
+<status status="PASS" starttime="20210106 02:40:10.710" endtime="20210106 02:40:10.711"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${zip}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.713" level="INFO">${zip} = 53003</msg>
+<status status="PASS" starttime="20210106 02:40:10.711" endtime="20210106 02:40:10.713"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${EV}</var>
+</assign>
+<msg timestamp="20210106 02:40:10.714" level="INFO">${EV} = 409995944034</msg>
+<status status="PASS" starttime="20210106 02:40:10.713" endtime="20210106 02:40:10.714"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${Ev}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.714" level="INFO">${phone} = 409995944034</msg>
+<status status="PASS" starttime="20210106 02:40:10.714" endtime="20210106 02:40:10.715"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:10.706" endtime="20210106 02:40:10.715"></status>
+</kw>
+<kw name="Fill In Required Fields" library="my_addresses">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:address1</arg>
+<arg>${address}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.718" level="INFO">Typing text '2huU81k2N3LWKOGaQwQBS5' into text field 'id:address1'.</msg>
+<status status="PASS" starttime="20210106 02:40:10.717" endtime="20210106 02:40:10.884"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:city</arg>
+<arg>${city}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:10.884" level="INFO">Typing text 'PNUNGdiS' into text field 'id:city'.</msg>
+<status status="PASS" starttime="20210106 02:40:10.884" endtime="20210106 02:40:11.067"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:postcode</arg>
+<arg>${zip}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.068" level="INFO">Typing text '53003' into text field 'id:postcode'.</msg>
+<status status="PASS" starttime="20210106 02:40:11.068" endtime="20210106 02:40:11.210"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone</arg>
+<arg>${phone}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.212" level="INFO">Typing text '409995944034' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210106 02:40:11.210" endtime="20210106 02:40:11.364"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${alias}</var>
+</assign>
+<msg timestamp="20210106 02:40:11.365" level="INFO">${alias} = ohogmoxg</msg>
+<status status="PASS" starttime="20210106 02:40:11.364" endtime="20210106 02:40:11.365"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:alias</arg>
+<arg>${alias}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.365" level="INFO">Typing text 'ohogmoxg' into text field 'id:alias'.</msg>
+<status status="PASS" starttime="20210106 02:40:11.365" endtime="20210106 02:40:11.520"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1, 50),1)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${rand_int}</var>
+</assign>
+<msg timestamp="20210106 02:40:11.521" level="INFO">${rand_int} = [33]</msg>
+<status status="PASS" starttime="20210106 02:40:11.520" endtime="20210106 02:40:11.521"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${rand_int}[0]</arg>
+</arguments>
+<assign>
+<var>${rand_str}</var>
+</assign>
+<msg timestamp="20210106 02:40:11.522" level="INFO">${rand_str} = 33</msg>
+<status status="PASS" starttime="20210106 02:40:11.521" endtime="20210106 02:40:11.522"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=id_state</arg>
+<arg>${rand_str}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.523" level="INFO">Selecting options from selection list 'name=id_state' by value 33.</msg>
+<status status="PASS" starttime="20210106 02:40:11.522" endtime="20210106 02:40:11.630"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:10.716" endtime="20210106 02:40:11.630"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:phone</arg>
+<arg>${EMPTY}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.632" level="INFO">Typing text '' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210106 02:40:11.631" endtime="20210106 02:40:11.732"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:submitAddress</arg>
+</arguments>
+<msg timestamp="20210106 02:40:11.734" level="INFO">Clicking element 'id:submitAddress'.</msg>
+<status status="PASS" starttime="20210106 02:40:11.733" endtime="20210106 02:40:13.195"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:40:13.214" level="INFO">Current page contains text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:40:13.195" endtime="20210106 02:40:13.214"></status>
+</kw>
+<kw name="Log out user" library="log_out">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign out</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:40:13.247" level="INFO">Current page contains text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:40:13.217" endtime="20210106 02:40:13.247"></status>
+</kw>
+<msg timestamp="20210106 02:40:13.247" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:40:13.248" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:40:13.216" endtime="20210106 02:40:13.248"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:40:13.249" level="INFO">Clicking element 'xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:40:13.248" endtime="20210106 02:40:21.620"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:13.248" endtime="20210106 02:40:21.620"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:13.215" endtime="20210106 02:40:21.621"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210106 02:40:22.622" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210106 02:40:21.621" endtime="20210106 02:40:22.623"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:40:22.714" level="INFO">Current page does not contain text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:40:22.624" endtime="20210106 02:40:22.714"></status>
+</kw>
+<kw name="Log in user" library="log_in">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${login_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:40:22.719" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20210106 02:40:22.718" endtime="20210106 02:41:06.983"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210106 02:41:07.052" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210106 02:41:06.986" endtime="20210106 02:41:07.053"></status>
+</kw>
+<msg timestamp="20210106 02:41:07.053" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:41:07.053" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:41:06.984" endtime="20210106 02:41:07.053"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log in</arg>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Log in" library="log_in">
+<arguments>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Authentication</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:41:07.054" endtime="20210106 02:41:07.080"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${user_email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:41:07.081" level="INFO">Typing text 'oYnu4Bf5IE@ev.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 02:41:07.080" endtime="20210106 02:41:07.249"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passwd</arg>
+<arg>${user_pass}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:41:07.249" level="INFO">Typing text '33qqwvhfe0' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210106 02:41:07.249" endtime="20210106 02:41:07.449"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id:SubmitLogin</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:41:07.451" level="INFO">Sending key(s) ('RETURN',) to id:SubmitLogin element.</msg>
+<msg timestamp="20210106 02:41:09.316" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:41:09.317" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:41:07.450" endtime="20210106 02:41:09.341"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:41:07.054" endtime="20210106 02:41:09.341"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:41:07.053" endtime="20210106 02:41:09.342"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:40:22.715" endtime="20210106 02:41:09.342"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210106 02:41:09.378" level="INFO">Current page does not contain text 'Sign in'.</msg>
+<status status="PASS" starttime="20210106 02:41:09.342" endtime="20210106 02:41:09.378"></status>
+</kw>
+<kw name="Click Navbar With Check" library="bottom_navbar">
+<arguments>
+<arg>${navbar_woman}</arg>
+<arg>OK</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:41:09.380" endtime="20210106 02:41:09.398"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<msg timestamp="20210106 02:41:09.399" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[3]/footer/div/section[2]/div/div/ul/li/a'.</msg>
+<status status="PASS" starttime="20210106 02:41:09.399" endtime="20210106 02:41:34.576"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'OK'</arg>
+<arg>Page Should Not Contain</arg>
+<arg>error</arg>
+</arguments>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:41:34.624" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:41:34.579" endtime="20210106 02:41:34.624"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:41:34.578" endtime="20210106 02:41:34.624"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:41:34.624" endtime="20210106 02:41:34.624"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:41:34.625" endtime="20210106 02:41:34.625"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:41:09.379" endtime="20210106 02:41:34.625"></status>
+</kw>
+<kw name="Click Navbar With Check" library="bottom_navbar">
+<arguments>
+<arg>${navbar_specials}</arg>
+<arg>OK</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:41:34.626" endtime="20210106 02:41:34.640"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<msg timestamp="20210106 02:41:34.641" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210106 02:41:34.641" endtime="20210106 02:42:36.569"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'OK'</arg>
+<arg>Page Should Not Contain</arg>
+<arg>error</arg>
+</arguments>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:42:36.606" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:42:36.571" endtime="20210106 02:42:36.606"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:36.570" endtime="20210106 02:42:36.606"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:36.607" endtime="20210106 02:42:36.607"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:36.607" endtime="20210106 02:42:36.608"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:41:34.625" endtime="20210106 02:42:36.608"></status>
+</kw>
+<kw name="Click Navbar With Check" library="bottom_navbar">
+<arguments>
+<arg>${navbar_new_products}</arg>
+<arg>Alert</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:36.609" endtime="20210106 02:42:36.624"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<msg timestamp="20210106 02:42:36.624" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:42:36.624" endtime="20210106 02:42:38.489"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'OK'</arg>
+<arg>Page Should Not Contain</arg>
+<arg>error</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:38.489" endtime="20210106 02:42:38.490"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:38.493" endtime="20210106 02:42:38.513"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:38.491" endtime="20210106 02:42:38.514"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${alert_navbar}</arg>
+</arguments>
+<msg timestamp="20210106 02:42:38.528" level="INFO">Current page contains element 'xpath:/html/body/div[1]/div[2]/div/div[3]/div[2]/p'.</msg>
+<status status="PASS" starttime="20210106 02:42:38.515" endtime="20210106 02:42:38.528"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:38.514" endtime="20210106 02:42:38.528"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:36.608" endtime="20210106 02:42:38.528"></status>
+</kw>
+<kw name="Click Navbar With Check" library="bottom_navbar">
+<arguments>
+<arg>${navbar_best_sellers}</arg>
+<arg>OK</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:38.529" endtime="20210106 02:42:38.546"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_type}</arg>
+</arguments>
+<msg timestamp="20210106 02:42:38.547" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[3]/footer/div/section[3]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20210106 02:42:38.546" endtime="20210106 02:42:42.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'OK'</arg>
+<arg>Page Should Not Contain</arg>
+<arg>error</arg>
+</arguments>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:42:42.515" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:42:42.483" endtime="20210106 02:42:42.515"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:42.482" endtime="20210106 02:42:42.515"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:42.516" endtime="20210106 02:42:42.516"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${expected_output}' == 'Alert'</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${alert_navbar}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:42:42.516" endtime="20210106 02:42:42.516"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:38.528" endtime="20210106 02:42:42.517"></status>
+</kw>
+<kw name="Fill Search" library="search">
+<arguments>
+<arg>Dress</arg>
+<arg>Price: Highest first</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search}</arg>
+<arg>${search_text}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:42:42.518" level="INFO">Typing text 'Dress' into text field 'id:search_query_top'.</msg>
+<status status="PASS" starttime="20210106 02:42:42.517" endtime="20210106 02:42:42.633"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${submit}</arg>
+</arguments>
+<msg timestamp="20210106 02:42:42.634" level="INFO">Clicking element 'name:submit_search'.</msg>
+<status status="PASS" starttime="20210106 02:42:42.633" endtime="20210106 02:43:11.810"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${sortby}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${sortby}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:43:11.812" endtime="20210106 02:43:11.838"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:43:11.810" endtime="20210106 02:43:11.838"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${subject}' == 'NULL'</arg>
+<arg>select from list by label</arg>
+<arg>${sortby}</arg>
+<arg>${subject}</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${sortby}</arg>
+<arg>${subject}</arg>
+</arguments>
+<msg timestamp="20210106 02:43:11.839" level="INFO">Selecting options from selection list 'selectProductSort' by label Price: Highest first.</msg>
+<status status="PASS" starttime="20210106 02:43:11.839" endtime="20210106 02:43:27.151"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:43:11.839" endtime="20210106 02:43:27.151"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:42:42.517" endtime="20210106 02:43:27.152"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<arguments>
+<arg>${alert_search}</arg>
+</arguments>
+<msg timestamp="20210106 02:43:27.179" level="INFO">Current page does not contain element 'xpath://*[@id="center_column"]/p'.</msg>
+<status status="PASS" starttime="20210106 02:43:27.153" endtime="20210106 02:43:27.179"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${first_div_sortby}</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:43:27.180" endtime="20210106 02:43:27.202"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${first_div_sortby}</arg>
+<arg>Printed Dress</arg>
+</arguments>
+<msg timestamp="20210106 02:43:27.237" level="INFO">Element 'xpath:html/body/div[1]/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/h5/a' contains text 'Printed Dress'.</msg>
+<status status="PASS" starttime="20210106 02:43:27.203" endtime="20210106 02:43:27.237"></status>
+</kw>
+<kw name="Add to cart" library="addtocart">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+</arguments>
+<msg timestamp="20210106 02:43:27.240" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210106 02:43:27.239" endtime="20210106 02:44:37.047"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210106 02:44:37.048" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210106 02:44:37.048" endtime="20210106 02:44:37.364"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20210106 02:44:37.365" level="INFO">Clicking element 'xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210106 02:44:37.365" endtime="20210106 02:44:37.509"></status>
+</kw>
+<kw name="Continue Shopping" library="addtocart">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:44:37.512" endtime="20210106 02:44:38.384"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping cart</arg>
+</arguments>
+<msg timestamp="20210106 02:44:38.446" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20210106 02:44:38.384" endtime="20210106 02:44:38.447"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+</arguments>
+<msg timestamp="20210106 02:44:38.448" level="INFO">Clicking element 'xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span'.</msg>
+<status status="PASS" starttime="20210106 02:44:38.447" endtime="20210106 02:44:38.675"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210106 02:44:38.770" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]' contains text '1'.</msg>
+<status status="PASS" starttime="20210106 02:44:38.677" endtime="20210106 02:44:38.771"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:44:37.510" endtime="20210106 02:44:38.771"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210106 02:44:38.773" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210106 02:44:38.772" endtime="20210106 02:44:39.081"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[2]</arg>
+</arguments>
+<msg timestamp="20210106 02:44:39.082" level="INFO">Clicking element 'xpath://*[@id="homefeatured"]/li[1]/div/div[2]/div[2]/a[2]'.</msg>
+<status status="PASS" starttime="20210106 02:44:39.081" endtime="20210106 02:45:29.033"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div/section[2]/h3</arg>
+<arg>MORE INFO</arg>
+</arguments>
+<msg timestamp="20210106 02:45:29.083" level="INFO">Element 'xpath://*[@id="center_column"]/div/section[2]/h3' contains text 'MORE INFO'.</msg>
+<status status="PASS" starttime="20210106 02:45:29.034" endtime="20210106 02:45:29.083"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="add_to_cart"]/button/span</arg>
+</arguments>
+<msg timestamp="20210106 02:45:29.084" level="INFO">Clicking element 'xpath://*[@id="add_to_cart"]/button/span'.</msg>
+<status status="PASS" starttime="20210106 02:45:29.083" endtime="20210106 02:45:29.172"></status>
+</kw>
+<kw name="Continue Shopping" library="addtocart">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:45:29.173" endtime="20210106 02:45:33.436"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping cart</arg>
+</arguments>
+<msg timestamp="20210106 02:45:33.467" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20210106 02:45:33.436" endtime="20210106 02:45:33.467"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+</arguments>
+<msg timestamp="20210106 02:45:33.468" level="INFO">Clicking element 'xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span'.</msg>
+<status status="PASS" starttime="20210106 02:45:33.468" endtime="20210106 02:45:33.539"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210106 02:45:33.583" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]' contains text '2'.</msg>
+<status status="PASS" starttime="20210106 02:45:33.540" endtime="20210106 02:45:33.583"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:45:29.172" endtime="20210106 02:45:33.584"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="block_top_menu"]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:45:33.584" level="INFO">Clicking element 'xpath://*[@id="block_top_menu"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210106 02:45:33.584" endtime="20210106 02:48:58.946"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210106 02:48:58.949" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210106 02:48:58.947" endtime="20210106 02:48:59.256"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[2]/div[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20210106 02:48:59.258" level="INFO">Clicking element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210106 02:48:59.257" endtime="20210106 02:48:59.495"></status>
+</kw>
+<kw name="Continue Shopping" library="addtocart">
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:48:59.497" endtime="20210106 02:49:00.860"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping cart</arg>
+</arguments>
+<msg timestamp="20210106 02:49:00.891" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20210106 02:49:00.861" endtime="20210106 02:49:00.891"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+</arguments>
+<msg timestamp="20210106 02:49:00.892" level="INFO">Clicking element 'xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span'.</msg>
+<status status="PASS" starttime="20210106 02:49:00.892" endtime="20210106 02:49:00.987"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210106 02:49:01.073" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]' contains text '3'.</msg>
+<status status="PASS" starttime="20210106 02:49:00.988" endtime="20210106 02:49:01.073"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:48:59.496" endtime="20210106 02:49:01.073"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210106 02:49:01.074" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210106 02:49:01.074" endtime="20210106 02:49:01.383"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:49:01.384" level="INFO">Clicking element 'xpath://*[@id="center_column"]/ul/li[2]/div/div[3]/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:49:01.384" endtime="20210106 02:49:01.505"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210106 02:49:02.506" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210106 02:49:01.506" endtime="20210106 02:49:02.507"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/div[3]/div[2]/form/button</arg>
+</arguments>
+<msg timestamp="20210106 02:49:02.508" level="INFO">Clicking element 'xpath://*[@id="center_column"]/div[3]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20210106 02:49:02.507" endtime="20210106 02:49:09.270"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210106 02:49:10.271" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210106 02:49:09.270" endtime="20210106 02:49:10.271"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[5]/div/div/a[1]</arg>
+</arguments>
+<msg timestamp="20210106 02:49:10.274" level="INFO">Clicking element 'xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[5]/div/div/a[1]'.</msg>
+<status status="PASS" starttime="20210106 02:49:10.272" endtime="20210106 02:49:10.357"></status>
+</kw>
+<kw name="Continue Shopping" library="addtocart">
+<arguments>
+<arg>4</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:49:10.358" endtime="20210106 02:49:12.117"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping cart</arg>
+</arguments>
+<msg timestamp="20210106 02:49:12.135" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20210106 02:49:12.118" endtime="20210106 02:49:12.135"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+</arguments>
+<msg timestamp="20210106 02:49:12.136" level="INFO">Clicking element 'xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span'.</msg>
+<status status="PASS" starttime="20210106 02:49:12.136" endtime="20210106 02:49:12.205"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210106 02:49:12.244" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]' contains text '4'.</msg>
+<status status="PASS" starttime="20210106 02:49:12.205" endtime="20210106 02:49:12.244"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:49:10.358" endtime="20210106 02:49:12.244"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i</arg>
+</arguments>
+<msg timestamp="20210106 02:49:12.245" level="INFO">Clicking element 'xpath://*[@id="product_comparison"]/tbody/tr[1]/td[2]/div[1]/a/i'.</msg>
+<status status="PASS" starttime="20210106 02:49:12.245" endtime="20210106 02:49:13.327"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a</arg>
+</arguments>
+<msg timestamp="20210106 02:49:13.330" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a'.</msg>
+<status status="PASS" starttime="20210106 02:49:13.329" endtime="20210106 02:49:13.688"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/div/div/div/dl/dt/span/a</arg>
+</arguments>
+<msg timestamp="20210106 02:49:13.690" level="INFO">Clicking element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/div/div/div/dl/dt/span/a'.</msg>
+<status status="PASS" starttime="20210106 02:49:13.689" endtime="20210106 02:49:13.874"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>2</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:49:13.875" endtime="20210106 02:49:15.255"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20210106 02:49:15.257" level="INFO">Clicking element 'xpath://*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20210106 02:49:15.256" endtime="20210106 02:49:26.053"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="home-page-tabs"]/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:49:26.054" level="INFO">Clicking element 'xpath://*[@id="home-page-tabs"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:49:26.053" endtime="20210106 02:49:26.153"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="blockbestsellers"]/li[1]/div/div[1]/div/a[1]/img</arg>
+</arguments>
+<msg timestamp="20210106 02:49:26.153" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="blockbestsellers"]/li[1]/div/div[1]/div/a[1]/img'.</msg>
+<status status="PASS" starttime="20210106 02:49:26.153" endtime="20210106 02:49:26.445"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="blockbestsellers"]/li[1]/div/div[2]/div[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20210106 02:49:26.446" level="INFO">Clicking element 'xpath://*[@id="blockbestsellers"]/li[1]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210106 02:49:26.445" endtime="20210106 02:49:26.549"></status>
+</kw>
+<kw name="Continue Shopping" library="addtocart">
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+<arg>timeout= 10s</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:49:26.550" endtime="20210106 02:49:27.322"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping cart</arg>
+</arguments>
+<msg timestamp="20210106 02:49:27.346" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20210106 02:49:27.322" endtime="20210106 02:49:27.346"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span</arg>
+</arguments>
+<msg timestamp="20210106 02:49:27.347" level="INFO">Clicking element 'xpath://*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span'.</msg>
+<status status="PASS" starttime="20210106 02:49:27.347" endtime="20210106 02:49:27.408"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20210106 02:49:27.448" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a/span[1]' contains text '3'.</msg>
+<status status="PASS" starttime="20210106 02:49:27.408" endtime="20210106 02:49:27.448"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:49:26.549" endtime="20210106 02:49:27.449"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:43:27.238" endtime="20210106 02:49:27.449"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a</arg>
+</arguments>
+<msg timestamp="20210106 02:49:27.450" level="INFO">Clicking element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a'.</msg>
+<status status="PASS" starttime="20210106 02:49:27.449" endtime="20210106 02:49:30.306"></status>
+</kw>
+<kw name="Purchase Cart" library="purchase">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${order}</arg>
+</arguments>
+<msg timestamp="20210106 02:49:30.320" level="INFO">Current location is 'http://automationpractice.com/index.php?controller=order'.</msg>
+<status status="PASS" starttime="20210106 02:49:30.310" endtime="20210106 02:49:30.320"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210106 02:49:32.321" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210106 02:49:30.321" endtime="20210106 02:49:32.322"></status>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a</arg>
+<arg>empty</arg>
+</arguments>
+<msg timestamp="20210106 02:49:32.374" level="INFO">Element 'xpath://*[@id="header"]/div[3]/div/div/div[3]/div/a' does not contain text 'empty'.</msg>
+<status status="PASS" starttime="20210106 02:49:32.322" endtime="20210106 02:49:32.374"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath://*[@id="center_column"]/p[2]/a[1]</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:49:32.375" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="center_column"]/p[2]/a[1] element.</msg>
+<msg timestamp="20210106 02:49:38.558" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:49:38.558" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:49:32.374" endtime="20210106 02:49:38.570"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=processAddress</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:49:38.572" level="INFO">Sending key(s) ('RETURN',) to name=processAddress element.</msg>
+<msg timestamp="20210106 02:50:05.421" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:50:05.421" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:49:38.570" endtime="20210106 02:50:05.432"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>name=cgv</arg>
+</arguments>
+<msg timestamp="20210106 02:50:05.433" level="INFO">Selecting checkbox 'name=cgv'.</msg>
+<status status="PASS" starttime="20210106 02:50:05.432" endtime="20210106 02:50:05.530"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=processCarrier</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:50:05.532" level="INFO">Sending key(s) ('RETURN',) to name=processCarrier element.</msg>
+<msg timestamp="20210106 02:50:07.903" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:50:07.903" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:50:05.531" endtime="20210106 02:50:07.923"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="HOOK_PAYMENT"]/div[1]/div/p/a</arg>
+</arguments>
+<msg timestamp="20210106 02:50:07.926" level="INFO">Clicking element 'xpath://*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'.</msg>
+<status status="PASS" starttime="20210106 02:50:07.925" endtime="20210106 02:50:09.268"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath://*[@id="cart_navigation"]/button</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:50:09.271" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="cart_navigation"]/button element.</msg>
+<msg timestamp="20210106 02:50:13.346" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:50:13.346" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:50:09.269" endtime="20210106 02:50:13.356"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Your order on My Store is complete.</arg>
+</arguments>
+<msg timestamp="20210106 02:50:13.376" level="INFO">Current page contains text 'Your order on My Store is complete.'.</msg>
+<status status="PASS" starttime="20210106 02:50:13.356" endtime="20210106 02:50:13.376"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+</arguments>
+<msg timestamp="20210106 02:50:13.377" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210106 02:50:13.376" endtime="20210106 02:50:16.701"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210106 02:50:19.702" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210106 02:50:16.701" endtime="20210106 02:50:19.703"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:49:30.308" endtime="20210106 02:50:19.703"></status>
+</kw>
+<kw name="Log out user" library="log_out">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign out</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:50:19.784" level="INFO">Current page contains text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:50:19.707" endtime="20210106 02:50:19.785"></status>
+</kw>
+<msg timestamp="20210106 02:50:19.785" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:50:19.785" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:50:19.705" endtime="20210106 02:50:19.785"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:50:19.788" level="INFO">Clicking element 'xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:50:19.788" endtime="20210106 02:50:22.623"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:19.786" endtime="20210106 02:50:22.624"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:19.704" endtime="20210106 02:50:22.624"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210106 02:50:23.625" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210106 02:50:22.624" endtime="20210106 02:50:23.626"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:50:23.723" level="INFO">Current page does not contain text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:50:23.626" endtime="20210106 02:50:23.723"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210106 02:50:23.723" endtime="20210106 02:50:24.827"></status>
+</kw>
+<kw name="Open Site" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210106 02:50:24.829" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210106 02:50:24.828" endtime="20210106 02:50:45.213"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:24.827" endtime="20210106 02:50:45.213"></status>
+</kw>
+<kw name="Log in user" library="log_in">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${login_page}</arg>
+</arguments>
+<msg timestamp="20210106 02:50:45.216" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20210106 02:50:45.216" endtime="20210106 02:50:46.730"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign in</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20210106 02:50:46.759" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210106 02:50:46.731" endtime="20210106 02:50:46.759"></status>
+</kw>
+<msg timestamp="20210106 02:50:46.760" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:50:46.760" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:50:46.730" endtime="20210106 02:50:46.760"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log in</arg>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Log in" library="log_in">
+<arguments>
+<arg>${user_email}</arg>
+<arg>${user_pass}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Authentication</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:50:46.761" endtime="20210106 02:50:46.777"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${user_email}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:50:46.777" level="INFO">Typing text 'oYnu4Bf5IE@ev.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210106 02:50:46.777" endtime="20210106 02:50:46.889"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passwd</arg>
+<arg>${user_pass}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20210106 02:50:46.890" level="INFO">Typing text '33qqwvhfe0' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210106 02:50:46.889" endtime="20210106 02:50:47.004"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id:SubmitLogin</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210106 02:50:47.005" level="INFO">Sending key(s) ('RETURN',) to id:SubmitLogin element.</msg>
+<msg timestamp="20210106 02:50:49.238" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210106 02:50:49.238" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210106 02:50:47.004" endtime="20210106 02:50:49.250"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:46.760" endtime="20210106 02:50:49.250"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:46.760" endtime="20210106 02:50:49.250"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:45.214" endtime="20210106 02:50:49.250"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>error</arg>
+</arguments>
+<msg timestamp="20210106 02:50:49.301" level="INFO">Current page does not contain text 'error'.</msg>
+<status status="PASS" starttime="20210106 02:50:49.251" endtime="20210106 02:50:49.301"></status>
+</kw>
+<kw name="Test Order History" library="personal_info">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${history}</arg>
+</arguments>
+<msg timestamp="20210106 02:50:49.303" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=history'</msg>
+<status status="PASS" starttime="20210106 02:50:49.302" endtime="20210106 02:50:51.258"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should not contain</arg>
+<arg>You have not placed any orders.</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>You have not placed any orders.</arg>
+</arguments>
+<msg timestamp="20210106 02:50:51.298" level="INFO">Current page does not contain text 'You have not placed any orders.'.</msg>
+<status status="PASS" starttime="20210106 02:50:51.259" endtime="20210106 02:50:51.298"></status>
+</kw>
+<msg timestamp="20210106 02:50:51.298" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:50:51.298" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:50:51.259" endtime="20210106 02:50:51.298"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Order History Private Call</arg>
+</arguments>
+<status status="PASS" starttime="20210106 02:50:51.299" endtime="20210106 02:50:51.299"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:49.301" endtime="20210106 02:50:51.299"></status>
+</kw>
+<kw name="Log out user" library="log_out">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Page should contain</arg>
+<arg>Sign out</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+<var>${value}</var>
+</assign>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:50:51.323" level="INFO">Current page contains text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:50:51.301" endtime="20210106 02:50:51.323"></status>
+</kw>
+<msg timestamp="20210106 02:50:51.323" level="INFO">${status} = PASS</msg>
+<msg timestamp="20210106 02:50:51.324" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20210106 02:50:51.301" endtime="20210106 02:50:51.324"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Click Element</arg>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a</arg>
+</arguments>
+<msg timestamp="20210106 02:50:51.324" level="INFO">Clicking element 'xpath://*[@id="header"]/div[2]/div/div/nav/div[2]/a'.</msg>
+<status status="PASS" starttime="20210106 02:50:51.324" endtime="20210106 02:50:53.315"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:51.324" endtime="20210106 02:50:53.315"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:50:51.300" endtime="20210106 02:50:53.316"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210106 02:50:54.319" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210106 02:50:53.317" endtime="20210106 02:50:54.320"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Sign out</arg>
+</arguments>
+<msg timestamp="20210106 02:50:54.401" level="INFO">Current page does not contain text 'Sign out'.</msg>
+<status status="PASS" starttime="20210106 02:50:54.321" endtime="20210106 02:50:54.402"></status>
+</kw>
+<doc>Normal Use Case</doc>
+<tags>
+<tag>System Test</tag>
+</tags>
+<status status="PASS" starttime="20210106 02:39:13.477" endtime="20210106 02:50:54.404" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210106 02:50:54.412" endtime="20210106 02:50:54.486"></status>
+</kw>
+<status status="PASS" starttime="20210106 02:38:21.580" endtime="20210106 02:50:54.486"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">System Test</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="System Test">System Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
