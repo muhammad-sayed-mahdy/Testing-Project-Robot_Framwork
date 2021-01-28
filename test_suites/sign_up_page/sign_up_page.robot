@@ -26,15 +26,15 @@ Sign up and logging
     [Tags]  Integreate
     Sign up and logging KW
 
-Sign up and logging multiple times
-    # Info
-    [Documentation]  Sign Up with log out and log in multiple times
-    [Tags]  Integreate Excess
-    FOR    ${i}    IN RANGE    10
-    Log     trial: ${i}
-        Exit For Loop If    ${i} == 9
-        Sign up and logging KW
-    END
+# Sign up and logging multiple times
+#     # Info
+#     [Documentation]  Sign Up with log out and log in multiple times
+#     [Tags]  Integreate Excess
+#     FOR    ${i}    IN RANGE    2
+#     Log     trial: ${i}
+#         Exit For Loop If    ${i} == 9
+#         Sign up and logging KW
+#     END
 
 *** Keywords ***
 Sign up and logging KW

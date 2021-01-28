@@ -1,7 +1,7 @@
 # What is this?
     Testing Project, testing the demo shopping website automationpractice.com , using Robot Framework.
 
-## Installation
+## Installation (for Linux)
     + pip installations:
         pip install robotframework
         pip install robotframework-seleniumlibrary
@@ -15,7 +15,7 @@
         sudo mv chromedriver /usr/local/bin
         export PATH=$PATH:/usr/local/bin/chromedriver
 
-## Usage
+## How to Run
     change directory to the specific file and type:
         robot file_name.robot
 
