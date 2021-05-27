@@ -82,9 +82,9 @@ Excessive Consecutive Log ins and outs
     [Documentation]  Logging in and out multiple times
     [Tags]  Component Excess
     # Procedure
-    FOR    ${i}    IN RANGE    999999
+    FOR    ${i}    IN RANGE    2
         Log     trial: ${i}
-        Exit For Loop If    ${i} == 9
+        # Exit For Loop If    ${i} == 9
         log_in.Log in user  ${email_1}  ${pass_1}
         Page Should Not Contain     error
         log_out.Log out user
@@ -95,9 +95,9 @@ Excessive Consecutive Log ins and outs Multiple Users
     [Documentation]  Logging in and out multiple times
     [Tags]  Component Excess
     # Procedure
-    FOR    ${i}    IN RANGE    999999
+    FOR    ${i}    IN RANGE    2
         Log     trial: ${i}
-        Exit For Loop If    ${i} == 9
+        # Exit For Loop If    ${i} == 9
         log_in.Log in user  ${email_1}  ${pass_1}
         Page Should Not Contain     error
         log_out.Log out user

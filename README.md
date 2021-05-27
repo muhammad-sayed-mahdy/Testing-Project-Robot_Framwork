@@ -23,4 +23,14 @@ change directory to the specific file and type: `robot file_name.robot`
 `bash clear.sh`
 
 ## Report
-For more information, you can refer to the [document](doc/pdf_doc/Testing_Project_Report.pdf)
+For more information, you may refer to the [document](doc/pdf_doc/Testing_Project_Report.pdf)
+
+## Authors 
+>[Muhammad Sayed Mahdy](https://github.com/muhammad-sayed-mahdy)
+
+>[Omar Desoky](https://github.com/OmarDesoky) 
+
+>[Kareem Osama Sobeih](https://github.com/KareemOsamaSobeih)
+
+
+>[Evram Yousef](https://github.com/Evraa)
